@@ -1,0 +1,37 @@
+
+.tec{
+	background: #00765F;
+	color: white;
+}
+
+.ped{
+	background: #E76D24;
+	color: white;
+}	
+
+.com{
+	background: #553C7B;
+	color: white;
+}
+
+.ges{
+	background: #899617;
+	color: white;
+}
+
+.inv{
+	background: #0095C0;
+	color: white;
+}
+
+#encuestaHerramientas, #encuestaCompentencias {
+	display: none;
+}
+
+.pnlpOtros {
+	display:none;
+}
+
+.carousel-indicators li{    
+    background-color: #CE1B28;    
+}

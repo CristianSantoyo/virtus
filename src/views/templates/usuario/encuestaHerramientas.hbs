@@ -1,0 +1,573 @@
+<script type="text/javascript" src="/script/scriptHerramientas.js"></script>
+<body>
+    {{> navUsuario}}
+    <div class="container p-4">
+        <section id="encuestaHerramientas" class="wrapper">
+            <header>
+                <h2>Formulario competencias TIC</h2>
+                <h3>Seleccione según crea conveniente para cada recurso presentado con el que ha trabajado.
+                        Puede seleccionar uno o varios recursos según sea el caso.</h3>
+            </header>
+
+            <!-- Form -->
+            <form action="/encuestaHerramientas/" method="POST" id="formHerramientas">
+                <hr>
+                <!-- Estructura 2 columnas  -->
+                <div class="row">
+
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 1: Herramientas de trabajo colaborativo:</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">
+                        <p>						
+                            A. Para documentos colaborativos:						
+                        </p>						
+                        <input type="checkbox" id="p_1_a_1" name="p_1_a_1" value="Google Drive">
+                        <label for="p_1_a_1">Google Drive</label><br>
+                        <input type="checkbox" id="p_1_a_2" name="p_1_a_2" value="One Drive">
+                        <label for="p_1_a_2">One Drive</label><br>
+                        <input type="checkbox" id="p_1_a_3" name="p_1_a_3" value="Dropbox">
+                        <label for="p_1_a_3">Dropbox</label><br>
+                        
+                        <input type="checkbox" id="p_1_a_otros" name="p_1_a_otros" class="otros">
+                        <label for="p_1_a_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_1_a_otros">
+                            <label for="p_1_a_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_1_a_cuales" name="p_1_a_cuales" placeholder="¿Cuál?" maxlength="20">
+                        </div>
+
+
+                        <p>						
+                            B. Para la generación de conocimiento:					
+                        </p>						
+                        <input type="checkbox" id="p_1_b_1" name="p_1_b_1" value="WikiSpaces">
+                        <label for="p_1_b_1">WikiSpaces</label><br>
+                        <input type="checkbox" id="p_1_b_2" name="p_1_b_2" value="PbWorks">
+                        <label for="p_1_b_2">PbWorks</label><br>
+                        <input type="checkbox" id="p_1_b_3" name="p_1_b_3" value="WetOaint">
+                        <label for="p_1_b_3">WetOaint</label><br>
+                        <input type="checkbox" id="p_1_b_4" name="p_1_b_4" value="Wikdictionary">
+                        <label for="p_1_b_4">Wikdictionary</label><br>
+                        <input type="checkbox" id="p_1_b_5" name="p_1_b_5" value="Wikipedia">
+                        <label for="p_1_b_5">Wikipedia</label><br>
+                        
+                        <input type="checkbox" id="p_1_b_otros" name="p_1_b_otros" class="otros">
+                        <label for="p_1_b_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_1_b_otros">
+                            <label for="p_1_b_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_1_b_cuales" name="p_1_b_cuales" placeholder="¿Cuál?" maxlength="20">
+                        </div>
+                        
+                        <p>						
+                            C. Para la creación de sitios web o blogs educativos:
+                        </p>						
+                        <input type="checkbox" id="p_1_c_1" name="p_1_c_1" value="Blogger">
+                        <label for="p_1_c_1">Blogger</label><br>
+                        <input type="checkbox" id="p_1_c_2" name="p_1_c_2" value="WordPress">
+                        <label for="p_1_c_2">WordPress</label><br>
+                        <input type="checkbox" id="p_1_c_3" name="p_1_c_3" value="Wix">
+                        <label for="p_1_c_3">Wix</label><br>
+                        <input type="checkbox" id="p_1_c_4" name="p_1_c_4" value="TypePad">
+                        <label for="p_1_c_4">TypePad</label><br>
+                        <input type="checkbox" id="p_1_c_5" name="p_1_c_5" value="Technorati">
+                        <label for="p_1_c_5">Technorati</label><br>
+
+                        <input type="checkbox" id="p_1_c_otros" name="p_1_c_otros" class="otros">
+                        <label for="p_1_c_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_1_c_otros">
+                            <label for="p_1_c_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_1_c_cuales" name="p_1_c_cuales" placeholder="¿Cuál?" maxlength="20">
+                        </div>			
+                        
+                        <br>			
+                    </div>
+                    <!-- Fin Pregunta -->	
+                </div>
+                <hr>
+                <div class="row">
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 2: Herramientas para la creación de Objetos Virtuales de Aprendizaje (OVA).</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">
+                                                
+                        <input type="checkbox" id="p_2_1" name="p_2_1" value="ExeLearning">
+                        <label for="p_2_1">ExeLearning</label><br>
+                        <input type="checkbox" id="p_2_2" name="p_2_2" value="Reload Scorm">
+                        <label for="p_2_2">Reload Scorm Editor - Reload Scorm Player</label><br>
+                        <input type="checkbox" id="p_2_3" name="p_2_3" value="CourseLab">
+                        <label for="p_2_3">CourseLab</label><br>
+                        <input type="checkbox" id="p_2_4" name="p_2_4" value="Constructor">
+                        <label for="p_2_4">Constructor</label><br>
+                        <input type="checkbox" id="p_2_5" name="p_2_5" value="Ardora">
+                        <label for="p_2_5">Ardora</label><br>
+                        <input type="checkbox" id="p_2_6" name="p_2_6" value="Udutu">
+                        <label for="p_2_6">Udutu</label><br>
+                        <input type="checkbox" id="p_2_7" name="p_2_7" value="H5P">
+                        <label for="p_2_7">H5P</label><br>					
+                        
+                        <input type="checkbox" id="p_2_otros" name="p_2_otros" class="otros">
+                        <label for="p_2_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_2_otros">
+                            <label for="p_2_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_2_cuales" name="p_2_cuales" placeholder="¿Cuál?" maxlength="20"><br>
+                        </div>
+                        
+                    </div>
+                    <!-- Fin Pregunta -->
+                </div>
+                <hr>
+                <div class="row">
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 3: Herramientas para el manejo de video.</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">
+                                                
+                        <input type="checkbox" id="p_3_1" name="p_3_1" value="Screencast-O-Matic">
+                        <label for="p_3_1">Screencast-O-Matic</label><br>
+                        <input type="checkbox" id="p_3_2" name="p_3_2" value="Movie Maker">
+                        <label for="p_3_2">Movie Maker</label><br>
+                        <input type="checkbox" id="p_3_3" name="p_3_3" value="YouTube">
+                        <label for="p_3_3">YouTube</label><br>
+                        <input type="checkbox" id="p_3_4" name="p_3_4" value="TeacherTube">
+                        <label for="p_3_4">TeacherTube</label><br>
+                        <input type="checkbox" id="p_3_5" name="p_3_5" value="Vimeo">
+                        <label for="p_3_5">Vimeo</label><br>
+                        <input type="checkbox" id="p_3_6" name="p_3_6" value="DelealPlay">
+                        <label for="p_3_6">DelealPlay</label><br>
+                        <input type="checkbox" id="p_3_7" name="p_3_7" value="Blip">
+                        <label for="p_3_7">Blip.tv</label><br>
+                        <input type="checkbox" id="p_3_8" name="p_3_8" value="Ustream">
+                        <label for="p_3_8">Ustream</label><br>				
+                        
+                        <input type="checkbox" id="p_3_otros" name="p_3_otros" class="otros">
+                        <label for="p_3_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_3_otros">
+                            <label for="p_3_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_3_cuales" name="p_3_cuales" placeholder="¿Cuál?" maxlength="20"><br>
+                        </div>
+                        
+                    </div>
+                    <!-- Fin Pregunta -->
+                </div>
+                <hr>
+                <div class="row">
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 4: Herramientas para el manejo de audio.</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">											
+                        <input type="checkbox" id="p_4_1" name="p_4_1" value="Audacity">
+                        <label for="p_4_1">Audacity</label><br>
+                        <input type="checkbox" id="p_4_2" name="p_4_2" value="Odeo">
+                        <label for="p_4_2">Odeo</label><br>										
+                        
+                        <input type="checkbox" id="p_4_otros" name="p_4_otros" class="otros">
+                        <label for="p_4_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_4_otros">
+                            <label for="p_4_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_4_cuales" name="p_4_cuales" placeholder="¿Cuál?" maxlength="20"><br>
+                        </div>
+                        
+                    </div>
+                    <!-- Fin Pregunta -->
+                </div>
+                <hr>
+                <div class="row">
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 5: Herramientas para el manejo de textos e imágenes.</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">
+                                                
+                        <input type="checkbox" id="p_5_1" name="p_5_1" value="canva.com">
+                        <label for="p_5_1">http://canva.com</label><br>
+                        <input type="checkbox" id="p_5_2" name="p_5_2" value="cooltext.com">
+                        <label for="p_5_2">http://es.cooltext.com</label><br>
+                        <input type="checkbox" id="p_5_3" name="p_5_3" value="pixlr.com">
+                        <label for="p_5_3">https://pixlr.com/editor/?loc=es</label><br>
+                        <input type="checkbox" id="p_5_4" name="p_5_4" value="Filckr">
+                        <label for="p_5_4">Filckr</label><br>
+                        <input type="checkbox" id="p_5_5" name="p_5_5" value="Photobucket">
+                        <label for="p_5_5">Photobucket</label><br>
+                        <input type="checkbox" id="p_5_6" name="p_5_6" value="FlickrCC">
+                        <label for="p_5_6">FlickrCC</label><br>
+                        <input type="checkbox" id="p_5_7" name="p_5_7" value="Picnik"> 
+                        <label for="p_5_7">Picnik</label><br>					
+                        
+                        <input type="checkbox" id="p_5_otros" name="p_5_otros" class="otros">
+                        <label for="p_5_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_5_otros">
+                            <label for="p_5_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_5_cuales" name="p_5_cuales" placeholder="¿Cuál?" maxlength="20"><br>
+                        </div>
+                        
+                    </div>
+                    <!-- Fin Pregunta -->
+                </div>
+                <hr>
+                <div class="row">
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 6: Herramientas para presentaciones en la nube.</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">
+                                                
+                        <input type="checkbox" id="p_6_1" name="p_6_1" value="Prezi">
+                        <label for="p_6_1">Prezi</label><br>
+                        <input type="checkbox" id="p_6_2" name="p_6_2" value="Slideshare">
+                        <label for="p_6_2">Slideshare</label><br>
+                        <input type="checkbox" id="p_6_3" name="p_6_3" value="Scribd">
+                        <label for="p_6_3">Scribd</label><br>
+                        <input type="checkbox" id="p_6_4" name="p_6_4" value="Powtoon">
+                        <label for="p_6_4">Powtoon</label><br>
+                        <input type="checkbox" id="p_6_5" name="p_6_5" value="Genially">
+                        <label for="p_6_5">Genially</label><br>
+                        <input type="checkbox" id="p_6_6" name="p_6_6" value="H5P">
+                        <label for="p_6_6">H5P</label><br>									
+                        
+                        <input type="checkbox" id="p_6_otros" name="p_6_otros" class="otros">
+                        <label for="p_6_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_6_otros">
+                                <label for="p_6_cuales">¿Cuáles?</label>
+                                <input type="text" id="p_6_cuales" name="p_6_cuales" placeholder="¿Cuál?" maxlength="20"><br>
+                        </div>
+                        
+                    </div>
+                    <!-- Fin Pregunta -->
+                </div>
+                <hr>
+                <div class="row">
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 7: Herramientas para videoconferencias y reuniones online.</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">
+                                                
+                        <input type="checkbox" id="p_7_1" name="p_7_1" value="Skype">
+                        <label for="p_7_1">Skype</label><br>
+                        <input type="checkbox" id="p_7_2" name="p_7_2" value="Zoom">
+                        <label for="p_7_2">Zoom</label><br>
+                        <input type="checkbox" id="p_7_3" name="p_7_3" value="Skype Empresarial (Lync)">
+                        <label for="p_7_3">Skype Empresarial (Lync)</label><br>
+                        <input type="checkbox" id="p_7_4" name="p_7_4" value="Haungounts">
+                        <label for="p_7_4">Haungounts _ Hangouts en vivo </label><br>
+                        <input type="checkbox" id="p_7_5" name="p_7_5" value="Webconference">
+                        <label for="p_7_5">Webconference</label><br>
+                        <input type="checkbox" id="p_7_6" name="p_7_6" value="Appear.in">
+                        <label for="p_7_6">Appear.in</label><br>
+                        <input type="checkbox" id="p_7_7" name="p_7_7" value="Join.me">
+                        <label for="p_7_7">Join.me</label><br>					
+                        <input type="checkbox" id="p_7_8" name="p_7_8" value="Dimdim">
+                        <label for="p_7_8">Dimdim</label><br>
+
+                        <input type="checkbox" id="p_7_otros" name="p_7_otros" class="otros">
+                        <label for="p_7_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_7_otros">
+                            <label for="p_7_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_7_cuales" name="p_7_cuales" placeholder="¿Cuál?" maxlength="20"><br>
+                        </div>
+                        
+                    </div>
+                    <!-- Fin Pregunta -->
+                </div>
+                <hr>
+                <div class="row">
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 8: Herramientas para comunidades.</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">
+                        <p>						
+                            A. Redes sociales:						
+                        </p>						
+                        <input type="checkbox" id="p_8_a_1" name="p_8_a_1" value="Facebook">
+                        <label for="p_8_a_1">Facebook</label><br>
+                        <input type="checkbox" id="p_8_a_2" name="p_8_a_2" value="Linkedin">
+                        <label for="p_8_a_2">Linkedin</label><br>
+                        <input type="checkbox" id="p_8_a_3" name="p_8_a_3" value="Instagram">
+                        <label for="p_8_a_3">Instagram</label><br>
+                        <input type="checkbox" id="p_8_a_4" name="p_8_a_4" value="Xing">
+                        <label for="p_8_a_4">Xing</label><br>
+                        <input type="checkbox" id="p_8_a_5" name="p_8_a_5" value="Twitter">
+                        <label for="p_8_a_5">Twitter</label><br>
+                        <input type="checkbox" id="p_8_a_6" name="p_8_a_6" value="Google Groups">
+                        <label for="p_8_a_6">Google Groups</label><br>
+                        <input type="checkbox" id="p_8_a_7" name="p_8_a_7" value="Yahoo Groups">
+                        <label for="p_8_a_7">Yahoo Groups</label><br>
+
+                        <input type="checkbox" id="p_8_a_otros" name="p_8_a_otros" class="otros">
+                        <label for="p_8_a_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_8_a_otros">
+                            <label for="p_8_a_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_8_a_cuales" name="p_8_a_cuales" placeholder="¿Cuál?" maxlength="20">
+                        </div>
+                        <p>						
+                            B. Mundos Virtuales:					
+                        </p>						
+                        <input type="checkbox" id="p_8_b_1" name="p_8_b_1" value="Second Life">
+                        <label for="p_8_b_1">Second Life</label><br>					
+                        
+                        <input type="checkbox" id="p_8_b_otros" name="p_8_b_otros" class="otros">
+                        <label for="p_8_b_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_8_b_otros">
+                            <label for="p_8_b_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_8_b_cuales" name="p_8_b_cuales" placeholder="¿Cuál?" maxlength="20">
+                        </div>
+
+                        <p>						
+                            C. BooksMarks y Agregadores RSS:
+                        </p>						
+                        <input type="checkbox" id="p_8_c_1" name="p_8_c_1" value="Delicious">
+                        <label for="p_8_c_1">Delicious</label><br>
+                        <input type="checkbox" id="p_8_c_2" name="p_8_c_2" value="Digg">
+                        <label for="p_8_c_2">Digg</label><br>
+                        <input type="checkbox" id="p_8_c_3" name="p_8_c_3" value="Meneame">
+                        <label for="p_8_c_3">Meneame</label><br>
+                        <input type="checkbox" id="p_8_c_4" name="p_8_c_4" value="Diigo">
+                        <label for="p_8_c_4">Diigo</label><br>
+                        <input type="checkbox" id="p_8_c_5" name="p_8_c_5" value="Bloglines">
+                        <label for="p_8_c_5">Bloglines</label><br>									
+                        
+                        <input type="checkbox" id="p_8_c_otros" name="p_8_c_otros" class="otros">
+                        <label for="p_8_c_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_8_c_otros">
+                            <label for="p_8_c_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_8_c_cuales" name="p_8_c_cuales" placeholder="¿Cuál?" maxlength="20"><br>
+                        </div>                    
+                    </div>
+                    <!-- Fin Pregunta -->	
+                </div>
+                <hr>
+                <div class="row">
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 9: Herramientas para tratamiento bibliográfico.</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">
+                                                
+                        <input type="checkbox" id="p_9_1" name="p_9_1" value="Zootero">
+                        <label for="p_9_1">Zootero</label><br>
+                        <input type="checkbox" id="p_9_2" name="p_9_2" value="Mendeley">
+                        <label for="p_9_2">Mendeley</label><br>
+                    
+
+                        <input type="checkbox" id="p_9_otros" name="p_9_otros" class="otros">
+                        <label for="p_9_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_9_otros">
+                            <label for="p_9_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_9_cuales" name="p_9_cuales" placeholder="¿Cuál?" maxlength="20"><br>
+                        </div>
+                        
+                    </div>
+                    <!-- Fin Pregunta -->
+                </div>
+                <hr>
+                <div class="row">
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 10: Herramientas para la creación de mapas mentales.</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">
+                                                
+                        <input type="checkbox" id="p_10_1" name="p_10_1" value="Cmaptools">
+                        <label for="p_10_1">Cmaptools</label><br>
+                        <input type="checkbox" id="p_10_2" name="p_10_2" value="FreeMind">
+                        <label for="p_10_2">FreeMind</label><br>
+                        <input type="checkbox" id="p_10_3" name="p_10_3" value="Bubb.us">
+                        <label for="p_10_3">Bubb.us</label><br>
+                        <input type="checkbox" id="p_10_4" name="p_10_4" value="Mindomo.com">
+                        <label for="p_10_4">Mindomo.com</label><br>					
+
+                        <input type="checkbox" id="p_10_otros" name="p_10_otros" class="otros">
+                        <label for="p_10_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_10_otros">
+                            <label for="p_10_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_10_cuales" name="p_10_cuales" placeholder="¿Cuál?" maxlength="20"><br>
+                        </div> 
+                        
+                    </div>
+                    <!-- Fin Pregunta -->
+                </div>
+                <hr>
+                <div class="row">
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 11: Herramientas para la creación de líneas de tiempo.</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">
+                                                
+                        <input type="checkbox" id="p_11_1" name="p_11_1" value="https://www.tiki_toki.com/">
+                        <label for="p_11_1">https://www.tiki_toki.com/</label><br>
+                        <input type="checkbox" id="p_11_2" name="p_11_2" value="https://time.graphics/">
+                        <label for="p_11_2">https://time.graphics/</label><br>				
+
+                        <input type="checkbox" id="p_11_otros" name="p_11_otros" class="otros">
+                        <label for="p_11_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_11_otros">
+                            <label for="p_11_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_11_cuales" name="p_11_cuales" placeholder="¿Cuál?" maxlength="20"><br>
+                        </div> 
+                        
+                    </div>
+                    <!-- Fin Pregunta -->
+                </div>
+                <hr>
+                <div class="row">
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 12: Herramientas para la creación de actividades digitales lúdicas.</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">
+                                                
+                        <input type="checkbox" id="p_12_1" name="p_12_1" value="Hot Potatoes">
+                        <label for="p_12_1">Hot Potatoes</label><br>
+                        <input type="checkbox" id="p_12_2" name="p_12_2" value="Ardora">
+                        <label for="p_12_2">Ardora</label><br>
+                        <input type="checkbox" id="p_12_3" name="p_12_3" value="Educaplay">
+                        <label for="p_12_3">Educaplay</label><br>
+                        <input type="checkbox" id="p_12_4" name="p_12_4" value="H5P">
+                        <label for="p_12_4">H5P</label><br>
+                        <input type="checkbox" id="p_12_5" name="p_12_5" value="Genially">
+                        <label for="p_12_5">Genially</label><br>				
+
+                        <input type="checkbox" id="p_12_otros" name="p_12_otros" class="otros">
+                        <label for="p_12_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_12_otros">
+                            <label for="p_12_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_12_cuales" name="p_12_cuales" placeholder="¿Cuál?" maxlength="20"><br>
+                        </div> 
+                        
+                    </div>
+                    <!-- Fin Pregunta -->
+                </div>
+                <hr>
+                <div class="row">
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 13: Sistemas administradores de aprendizaje (LMS)</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">
+                                                
+                        <input type="checkbox" id="p_13_1" name="p_13_1" value="Moodle">
+                        <label for="p_13_1">Moodle</label><br>
+                        <input type="checkbox" id="p_13_2" name="p_13_2" value="Claroline">
+                        <label for="p_13_2">Claroline</label><br>
+                        <input type="checkbox" id="p_13_3" name="p_13_3" value="Chamilo">
+                        <label for="p_13_3">Chamilo</label><br>
+                        <input type="checkbox" id="p_13_4" name="p_13_4" value="ATutor">
+                        <label for="p_13_4">ATutor</label><br>
+                        <input type="checkbox" id="p_13_5" name="p_13_5" value="Edmodo">
+                        <label for="p_13_5">Edmodo</label><br>
+                        <input type="checkbox" id="p_13_6" name="p_13_6" value="Google Scholar">
+                        <label for="p_13_6">Google Scholar</label><br>			
+
+                        <input type="checkbox" id="p_13_otros" name="p_13_otros" class="otros">
+                        <label for="p_13_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_13_otros">
+                            <label for="p_13_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_13_cuales" name="p_13_cuales" placeholder="¿Cuál?" maxlength="20"><br>
+                        </div> 
+                        
+                    </div>
+                    <!-- Fin Pregunta -->
+                </div>
+                <hr>
+                <div class="row">
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 14: Herramientas para comunicación y gestión.</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">
+                                                
+                        <input type="checkbox" id="p_14_1" name="p_14_1" value="Correo electrónico">
+                        <label for="p_14_1">Correo electrónico</label><br>
+                        <input type="checkbox" id="p_14_2" name="p_14_2" value="Paquetes de oficina">
+                        <label for="p_14_2">Paquetes de oficina: procesador de texto, hoja de cálculo, gestor de presentaciones. (MS Office, LibreOffice, OpenOffice)</label><br>							
+
+                        <input type="checkbox" id="p_14_otros" name="p_14_otros" class="otros">
+                        <label for="p_14_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_14_otros">
+                            <label for="p_14_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_14_cuales" name="p_14_cuales" placeholder="¿Cuál?" maxlength="20"><br>
+                        </div> 
+                        
+                    </div>
+                    <!-- Fin Pregunta -->
+                </div>
+                <hr>
+                <div class="row">
+                    <!-- Estructura pregunta -->	
+                    <div class="col-3 col-12-medium">				
+                        <h3>Pregunta 15: Herramientas estadísticas.</h3>
+                    </div>
+                    <div class="col-9 col-12-medium">
+                                                
+                        <input type="checkbox" id="p_15_1" name="p_15_1" value="PSPP">
+                        <label for="p_15_1">PSPP</label><br>
+                        <input type="checkbox" id="p_15_2" name="p_15_2" value="R">
+                        <label for="p_15_2">R</label><br>
+                        <input type="checkbox" id="p_15_3" name="p_15_3" value="Calc">
+                        <label for="p_15_3">Calc</label><br>
+                        <input type="checkbox" id="p_15_4" name="p_15_4" value="SPSS">
+                        <label for="p_15_4">SPSS</label><br>					
+
+                        <input type="checkbox" id="p_15_otros" name="p_15_otros" class="otros">
+                        <label for="p_15_otros">Otros</label><br>
+                        <div class="pnlpOtros" id="pnlp_15_otros">
+                            <label for="p_15_cuales">¿Cuáles?</label>
+                            <input type="text" id="p_15_cuales" name="p_15_cuales" placeholder="¿Cuál?" maxlength="20"><br>
+                        </div> 
+                        
+                    </div>
+                    <!-- Fin Pregunta -->
+                </div>            
+                <hr>
+                <div class="col-12">
+                    <input type="button" class="primary" value="Enviar Respuestas" data-toggle="modal" data-target="#exampleModal">                
+                    <input type="reset" class="secundary" value="Reiniciar" id="reiniciar">
+                </div>
+
+            </form>
+            <!-- Fin Formulario -->		
+        </section>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">Advertencia</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-3">
+                            <img src="/images/icons/warning-icon.png" width="100px">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="alert alert-warning" role="alert">
+                                ¿Está seguro que desea enviar la información puesta en el formulario?
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="primary" form="formHerramientas">Enviar Datos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> footer}}
+</body>
+
+    
+
+

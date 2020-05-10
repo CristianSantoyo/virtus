@@ -1,0 +1,8 @@
+.imagenRes{
+    position: absolute;
+    display: none;
+}
+
+#grafica{
+    width: 400px;    
+}

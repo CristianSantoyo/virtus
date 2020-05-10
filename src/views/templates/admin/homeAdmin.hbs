@@ -1,0 +1,175 @@
+<script type="text/javascript" src="/script/scriptHomeAdmin.js"></script>
+<body>
+    {{> navAdmin}}
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card m-5">
+                    <div class="card-header text-center">
+                        <h1>Opciones de Administrador</h1>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="/agregarDocente">
+                                    <button id="btnAgregar" class="primary m-1" style="width: 100%;">Agregar Docente</button>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <button id="btnDocentesRegistrados" class="primary m-1" style="width: 100%;">Administrar Docentes</button>
+                            </div>
+                            <div class="col-md-4">
+                                <button id="btnAnalizarResultados" class="primary m-1">Analizar Resultados</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+        
+        
+        <section id="docentesRegistrados" class="escondido">
+            
+            <div class="card m-2">
+                <div class="card-header text-center">
+                    <h1>Docentes Registrados</h1>
+                </div>
+                <div class="card-body">
+                    {{#each usuarios}}
+                    <div class="row">
+                        <div class="col-md-6">                                
+                            <div class="text-center">
+                                <h2>{{n_nombre}} {{n_apellido}}</h2>
+                                <h3><b>Cédula: </b>{{k_cedula}}</h3>
+                                {{#if n_imagen}}
+                                    <img src="/images/imagenesSubidas/{{n_imagen}}" alt="" height="100px" name="imagen" class="rounded-circle">
+                                {{else}}
+                                    <img src="/images/icons/user-icon.png" alt="" height="100px" name="imagen" class="rounded-circle">
+                                {{/if}} 
+                            </div>                                
+                        </div>
+                        
+                        <div class="col-md-4 text-center">
+                            <h3><b>Opciones</b></h3>                            
+                            <form action="/eliminarDocente/{{k_cedula}}" method="POST" id="formEliminar"></form>
+                            <a href="/llenarEncHerrAdmin/{{k_cedula}}">                                    
+                                <button class="primary m-2" style='width:100%;'>Llenar Encuesta Herramientas</button>
+                            </a>
+                            <a href="/llenarEncComAdmin/{{k_cedula}}">
+                                <button class="primary m-2" style='width:100%;'>Llenar Encuesta Competencias TIC</button>
+                            </a>
+                            {{#if isEncuestaHecha}}
+                                <a href="/verResultados/{{k_cedula}}">
+                                    <button class="primary m-2" style='width:100%;'>Ver Resultados de las Encuestas</button>
+                                </a>
+                            {{/if}}
+                            <a href="/verPerfilAdmin/{{k_cedula}}">
+                                <button class="primary m-2" style='width:100%;'>Ver Perfil</button>
+                            </a>
+                            <a href="/editarPerfilAdmin/{{k_cedula}}">
+                                <button class="primary m-2" style='width:100%;'>Editar Perfil</button>
+                            </a>
+                            <button class="m-2" style='width:100%;' data-toggle="modal" data-target="#modalEliminar">Eliminar Docente</button>
+                        </div>   
+                    </div>
+                    <hr>
+                    {{/each}}                        
+                </div>
+            </div>
+        </section>
+
+        <section id="busquedaResultados" class="escondido">            
+            <div class="card m-2">
+                <div class="card-header text-center">
+                    <h1>Análisis de Resultados</h1>
+                </div>
+                <div class="card-body">
+                    <form action="/resultadosbusqueda" method="POST">
+                        <div class="col-md-12">
+                            <h2>Realizar Búsqueda</h2>                        
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <h3>Establecer Criterios</h3>
+                                        <select class="form-control" name="selecCriterio" id="selecCriterio">
+                                            <option>Búsqueda por Institución</option>
+                                            <option>Búsqueda por Ciclo Propedéutico</option>
+                                            <option>Búsqueda por Área de Especialización</option>
+                                            <option>Búsqueda por Género</option>
+                                            <option>Búsqueda por Tipo de Asignatura</option>
+                                            <option>Búsqueda por Formación en la ETIC</option>
+                                            <option>Búsqueda por Facultad</option>
+                                        </select>
+
+                                        <div class="col-md-6">
+                                            <label>¿Desea realizar la búsqueda teniendo en cuenta el año?</label>
+                                            <input type="radio" name="año" id="añoSi" value="Si">
+                                            <label for="añoSi">Si</label>
+                                            <input type="radio" name="año" id="añoNo" value="No" checked>
+                                            <label for="añoNo">No</label>
+                                            <div class="escondido m-2" id="selecAño">
+                                                <label for="selecAño">Elija el año</label>
+                                                <select class="form-control" name="selecAño">
+                                                    {{#each años}}
+                                                        <option>{{n_año}}</option>
+                                                    {{/each}}
+                                                </select>
+                                            </div>                                            
+                                        </div>
+
+                                        <div class="col-md-4 escondido m-2" id="selecFacultad">
+                                            <label for="selecFacultad">Elija de qué Instintución</label>
+                                            <select class="form-control" name="selecFacultad">                                                
+                                                {{#each instituciones}}
+                                                    <option>{{n_nombre}}</option>
+                                                {{/each}}
+                                            </select>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">                
+                                <div class="form-group">                            
+                                    <button class="primary">Realizar Búsqueda</button>                            
+                                </div>
+                            </div>
+                        </div>  
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modalEliminarLongTitle">Advertencia</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-3">
+                            <img src="/images/icons/warning-icon.png" width="100px">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="alert alert-warning" role="alert">
+                                ¿Está seguro que desea eliminar este docente?
+                            </div>
+                        </div>
+                    </div>                
+                </div>                
+                <div class="modal-footer">
+                    <button type="button" class="secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="primary" form="formEliminar">Eliminar Docente</button>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> footer}}
+</body>

@@ -1,0 +1,48 @@
+<body>
+    {{> navUsuario}}
+    <div class="container p-4">
+        <hr>
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h2>Competencias TIC</h2>
+                <p align="justify">                
+                    En marzo de 2008 el Ministerio de Educación Nacional (MEN) presentó a la comunidad educativa el documento Apropiación de TIC , en el desarrollo profesional docente (Ruta de Apropiación de TIC en el Desarrollo Profesional Docente) para orientar los procesos de formación
+                    en el uso de TIC que se estaban ofreciendo a los docentes del país. La ruta se definió “con el
+                    fin de preparar a los docentes de forma estructurada, para enfrentarse al uso pedagógico de
+                    las TIC, participar en redes, comunidades virtuales y proyectos colaborativos, y sistematizar
+                    experiencias significativas con el uso de las TIC.”(Ministerio de Educación Nacional, 2008). 
+                </p>
+                <a href="/documents/competenciasTic.pdf" target="_blank">Leer más...</a>
+            </div>
+            <div class="col-md-5">
+                <div class="card">
+                    <img src="images/home-card-img01.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Realizar Encuesta</h3>
+                        <p class="card-text">Para Medir las competencias TIC del docente se plantea la siguiente encuesta</p>
+
+                        <a href="/encuestaHerramientas">
+                            <button class="primary form-group" style="width: 100%;">Realizar Encuesta Herramientas</button>
+                        </a>
+                        <a href="/encuestaCompetencias">
+                            <button class="primary form-group" style="width: 100%;">Realizar Encuesta Competencias</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        {{#if isEncuestaHecha}}
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <a href="/resultados">
+                            <button class="secundary">Mostrar Resultados de la Encuesta</button>
+                        </a>
+                    </div>                    
+                </div> 
+            </div>
+        {{/if}}        
+    </div>
+    {{> footer}}
+</body>

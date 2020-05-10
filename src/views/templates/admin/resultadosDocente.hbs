@@ -1,0 +1,290 @@
+
+<script type="text/javascript" src="/script/scriptResultados.js"></script>
+<script type="text/javascript" src="/script/html2canvas.min.js"></script>
+<body>
+    {{> navAdmin}}
+    <div class="container p-4" >   
+        <h1 class="text-center" id="contenidoPDF">Resultados del Formulario</h1>
+        <h2 class="text-center">Resultados Formulario de Competencias TIC</h2>
+        <h2 class="text-center">Cedula: {{cedula}}</h2>
+        <div class="row justify-content-sm-center align-items-center" >
+            <div class="col-md-auto" id="grafica">
+                
+                <img id="imgRes">
+                <img src="/images/imagenesResultados/pntTec.png" class="imagenRes" id="pntTec">
+                <img src="/images/imagenesResultados/pntPed.png" class="imagenRes" id="pntPed">
+                <img src="/images/imagenesResultados/pntCom.png" class="imagenRes" id="pntCom">
+                <img src="/images/imagenesResultados/pntGes.png" class="imagenRes" id="pntGes">
+                <img src="/images/imagenesResultados/pntInv.png" class="imagenRes" id="pntInv">
+                <input value={{resultadosCom.totalMomento.m1}} id="total_M1" class="escondido">
+                <input value={{resultadosCom.totalMomento.m2}} id="total_M2" class="escondido">
+                <input value={{resultadosCom.totalMomento.m3}} id="total_M3" class="escondido">
+                <input value={{resultadosCom.tec.momento}} id="tecM" class="escondido">
+                <input value={{resultadosCom.ped.momento}} id="pedM" class="escondido">
+                <input value={{resultadosCom.com.momento}} id="comM" class="escondido">
+                <input value={{resultadosCom.ges.momento}} id="gesM" class="escondido">
+                <input value={{resultadosCom.inv.momento}} id="invM" class="escondido">
+                    
+            </div>
+            <div class="col-sm"  id="tabla1">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Competencia</th>
+                            <th scope="col">Momento</th>
+                            <th scope="col">Estado</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="tec">Tecnología</td>
+                            <td id="s">{{resultadosCom.tec.momento}}</td>
+                            <td>{{resultadosCom.tec.estado}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="ped">Pedagogía</td>
+                            <td>{{resultadosCom.ped.momento}}</td>
+                            <td>{{resultadosCom.ped.estado}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td class="com">Comunicación</td>
+                            <td>{{resultadosCom.com.momento}}</td>
+                            <td>{{resultadosCom.com.estado}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td class="ges">Gestión</td>
+                            <td>{{resultadosCom.ges.momento}}</td>
+                            <td>{{resultadosCom.ges.estado}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td class="inv">Investigación</td>
+                            <td>{{resultadosCom.inv.momento}}</td>
+                            <td>{{resultadosCom.inv.estado}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <div class="row">        
+            <div class="col">
+                <h4 class="text-center">Gráfica de Resultados para Competencia en Tecnología</h4>
+                <div id="grafTec"></div>
+                <input value="{{resultadosCom.tec.m1}}" id="tec_m1" class="escondido">
+                <input value="{{resultadosCom.tec.m2}}" id="tec_m2" class="escondido">
+                <input value="{{resultadosCom.tec.m3}}" id="tec_m3" class="escondido">
+            </div>
+            <div class="col">
+                <h4 class="text-center">Gráfica de Resultados para Competencia de Pedagogía</h4>
+                <div id="grafPed"></div>
+                <input value="{{resultadosCom.ped.m1}}" id="ped_m1" class="escondido">
+                <input value="{{resultadosCom.ped.m2}}" id="ped_m2" class="escondido">
+                <input value="{{resultadosCom.ped.m3}}" id="ped_m3" class="escondido">
+            </div>
+            <div class="col">
+                <h4 class="text-center">Gráfica de Resultados para Competencia Comunicación</h4>
+                <div id="grafCom"></div>
+                <input value="{{resultadosCom.com.m1}}" id="com_m1" class="escondido">
+                <input value="{{resultadosCom.com.m2}}" id="com_m2" class="escondido">
+                <input value="{{resultadosCom.com.m3}}" id="com_m3" class="escondido">
+            </div>
+            <div class="col">
+                <h4 class="text-center">Gráfica de Resultados para Competencia de Gestión</h4>
+                <div id="grafGes"></div>
+                <input value="{{resultadosCom.ges.m1}}" id="ges_m1" class="escondido">
+                <input value="{{resultadosCom.ges.m2}}" id="ges_m2" class="escondido">
+                <input value="{{resultadosCom.ges.m3}}" id="ges_m3" class="escondido">
+            </div>
+            <div class="col">
+                <h4 class="text-center">Gráfica de Resultados para Competencia de Investigación</h4>
+                <div id="grafInv"></div>
+                <input value="{{resultadosCom.inv.m1}}" id="inv_m1" class="escondido">
+                <input value="{{resultadosCom.inv.m2}}" id="inv_m2" class="escondido">
+                <input value="{{resultadosCom.inv.m3}}" id="inv_m3" class="escondido">
+            </div>
+        </div>
+        <hr>
+        <h2>Puntuación por Compentecia</h2>
+        <div class="row" id="tabla2">        
+            <table class="table" >
+                <thead class="thead-dark">
+                    <tr>                    
+                        <th scope="col"></th>
+                        <th scope="col">Tecnología</th>
+                        <th scope="col">Pedagogía</th>
+                        <th scope="col">Comunicación</th>
+                        <th scope="col">Gestión</th>
+                        <th scope="col">investigación</th>
+                        <th scope="col">Total Momento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>M1</td>
+                        <td>{{resultadosCom.tec.m1}}</td>
+                        <td>{{resultadosCom.ped.m1}}</td>
+                        <td>{{resultadosCom.com.m1}}</td>
+                        <td>{{resultadosCom.ges.m1}}</td>
+                        <td>{{resultadosCom.inv.m1}}</td>
+                        <td>{{resultadosCom.totalMomento.m1}}</td>
+                    </tr>
+                    <tr>
+                        <td>M2</td>
+                        <td>{{resultadosCom.tec.m2}}</td>
+                        <td>{{resultadosCom.ped.m2}}</td>
+                        <td>{{resultadosCom.com.m2}}</td>
+                        <td>{{resultadosCom.ges.m2}}</td>
+                        <td>{{resultadosCom.inv.m2}}</td>
+                        <td>{{resultadosCom.totalMomento.m2}}</td>
+                    </tr>
+                    <tr>
+                        <td>M3</td>
+                        <td>{{resultadosCom.tec.m3}}</td>
+                        <td>{{resultadosCom.ped.m3}}</td>
+                        <td>{{resultadosCom.com.m3}}</td>
+                        <td>{{resultadosCom.ges.m3}}</td>
+                        <td>{{resultadosCom.inv.m3}}</td>
+                        <td>{{resultadosCom.totalMomento.m3}}</td>
+                    </tr>
+                    <tr>
+                        <td>Total Compentencia</td>
+                        <td>{{resultadosCom.tec.total}}</td>
+                        <td>{{resultadosCom.ped.total}}</td>
+                        <td>{{resultadosCom.com.total}}</td>
+                        <td>{{resultadosCom.ges.total}}</td>
+                        <td>{{resultadosCom.inv.total}}</td>
+                        <td></td>  
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="row" id="tabla3">
+            <h2>Resultados Recursos Trabajados</h2>
+            <table class="table" >
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Tipo de Herramienta</th>
+                        <th scope="col">Herramienta</th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Herramientas de trabajo colaborativo:</td>
+                        <td>{{resultadosHer.v_trabajoColaborativo}}</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>erramientas para la creación de Objetos Virtuales de Aprendizaje (OVA):</td>
+                        <td>{{resultadosHer.v_OVA}}</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Herramientas para el manejo de video:</td>
+                        <td>{{resultadosHer.v_video}}</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Herramienta para el manejo de audio:</td>
+                        <td>{{resultadosHer.v_audio}}</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Herramientas para el manejo de textos e imágenes:</td>
+                        <td>{{resultadosHer.v_texto_imagenes}}</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Herramientas para presentaciones en la nube:</td>
+                        <td>{{resultadosHer.v_presentacion}}</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Herramientas para videoconferencias y reuniones online:</td>
+                        <td>{{resultadosHer.v_videoConferencia}}</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Herramientas para comunidades:</td>
+                        <td>{{resultadosHer.v_comunidades}}</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Herramientas para tratamiento bibliográfico:</td>
+                        <td>{{resultadosHer.v_bibliografico}}</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Herramientas para la creación de mapas mentales:</td>
+                        <td>{{resultadosHer.v_mapas}}</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Herramientas para la creación de líneas de tiempo:</td>
+                        <td>{{resultadosHer.v_lineas}}</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Herramientas para la creación de actividades digitales lúdicas:</td>
+                        <td>{{resultadosHer.v_actividades}}</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Sistemas administradores de aprendizaje (LMS):</td>
+                        <td>{{resultadosHer.v_LMS}}</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Herramientas para comunicación y gestión:</td>
+                        <td>{{resultadosHer.v_comunicacion_gestion}}</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Herramientas estadísticas:</td>
+                        <td>{{resultadosHer.v_estadistica}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row" id="tabla4">
+            <h2>Otras Herramientas Utlizadas por el Usuario</h2>
+            <table class="table" >
+                <thead  class="thead-dark">
+                    <tr>
+                        <th>Tipo de Herramienta</th>
+                        <th>Herramienta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each resultadosHer.otro}}
+                        <tr>
+                            <td>{{v_tipo}}</td>
+                            <td>{{v_valor}}</td>
+                        </tr> 
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        
+        
+        <hr>
+        <div class="row justify-content-sm-center">        
+            <input type="button" value="Descargar PDF" class="primary" id="btnDescargarPDF">
+            <a href="/homeAdmin">
+                <input  type="button" value="Volver">
+            </a>
+        </div>
+        
+    </div>
+    {{> footer}}
+</body>
+

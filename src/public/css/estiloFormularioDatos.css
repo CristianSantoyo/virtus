@@ -1,0 +1,24 @@
+#perfil-editar, #perfil-normal {
+    display: none;
+}
+
+#txtInstitucion, #txtArea, #txtCiclo, #txtFacultad{
+    display: none;
+}
+
+#btnInputFile {
+    height: 40px;
+    border: grayS 1px solid;
+}
+
+#spanInputFile{
+    display: none;
+}
+
+.keyId {
+    display: none;
+}
+
+.escondido, .escondidoNombre, .escondidoPuntaje {
+    display: none;
+}

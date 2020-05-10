@@ -1,0 +1,1300 @@
+<script type="text/javascript" src="/script/scriptResultadosGenerales.js"></script>
+<body>
+    {{> navAdmin}}
+    <div class="container p-4" >
+        <h1 class="text-center" id="contenidoPDF">Resultados de la Búsqueda</h1>    
+        <div class="col-md-12">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h2>Resultados por: {{tipo.descripcion}}</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <center><div id="grafica"></div></center>                          
+                        </div>                        
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4">
+                                <h3 class="text-center"><b>Interpretar el puntaje:</b></h3>
+                                <ul align="justify">
+                                    <li><b>Momento Explorador</b> - Menos de 60 puntos</li>
+                                    <li><b>Momento Integrador</b> - Más de 59 puntos pero menos de 140 puntos</li>
+                                    <li><b>Momento Innovador</b> - Más de 140 puntos</li>
+                                </ul>
+                            </div>
+                        <div class="col-md-8">
+                            <table>
+                                <thead class="thead-dark ">
+                                    <tr>
+                                        <th class="text-center">Nombre</th>
+                                        <th class="text-center">Puntaje</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each resultados}}
+                                        <tr>
+                                            <td class="nom">{{nombre}}</td>
+                                            <td class="pun">{{puntaje}}</td>
+                                        </tr>
+                                    {{/each}}
+                                </tbody>                        
+                            </table>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h1 class="text-center">Resultados Herramientas</h1>
+            <!-- TrabajoA -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body text-center">
+                        <div class="row">
+                            <div class="col-md-7">
+                            <h4>Resultados: HERRAMIENTAS DE TRABAJO COLABORATIVO</h4>
+                            <h5>Para la generación de conocimiento</h5>
+                            <table>
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th></th>
+                                        {{#each resHerr}}
+                                        <th class="nomTrabajoA text-center">{{nombre}}</th>                                            
+                                        {{/each}}
+                                    </tr>                                        
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="nomHerrTrabajoA">Google Drive</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrTrabajoA">{{punTrabajoA.googleDrive}}</td>
+                                        {{/each}}
+                                    </tr>
+                                    <tr>
+                                        <td class="nomHerrTrabajoA">One Drive</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrTrabajoA">{{punTrabajoA.oneDrive}}</td>
+                                        {{/each}}
+                                    </tr>
+                                    <tr>
+                                        <td class="nomHerrTrabajoA">Dropbox</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrTrabajoA">{{punTrabajoA.dropbox}}</td>
+                                        {{/each}}
+                                    </tr>
+                                    <tr>
+                                        <td class="nomHerrTrabajoA">Otros</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrTrabajoA">{{punTrabajoA.otros}}</td>
+                                        {{/each}}
+                                    </tr>
+                                </tbody>                        
+                            </table>
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafTrabajoA"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- TrabajoB -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                            <h4>Resultados: HERRAMIENTAS DE TRABAJO COLABORATIVO</h4>
+                            <h5>Para documentos colaborativos</h5>
+                            <table>
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th></th>
+                                        {{#each resHerr}}
+                                        <th class="nomTrabajoB text-center">{{nombre}}</th>                                            
+                                        {{/each}}
+                                    </tr>                                        
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="nomHerrTrabajoB">WikiSpaces</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrTrabajoB">{{punTrabajoB.wikiSpaces}}</td>
+                                        {{/each}}
+                                    </tr>
+                                    <tr>
+                                        <td class="nomHerrTrabajoB">PbWorks</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrTrabajoB">{{punTrabajoB.pbWorks}}</td>
+                                        {{/each}}
+                                    </tr>
+                                    <tr>
+                                        <td class="nomHerrTrabajoB">WetOaint</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrTrabajoB">{{punTrabajoB.wetOaint}}</td>
+                                        {{/each}}
+                                    </tr>
+                                    <tr>
+                                        <td class="nomHerrTrabajoB">Wikdictionary</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrTrabajoB">{{punTrabajoB.wikdictionary}}</td>
+                                        {{/each}}
+                                    </tr>
+                                    <tr>
+                                        <td class="nomHerrTrabajoB">Wikipedia</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrTrabajoB">{{punTrabajoB.wikipedia}}</td>
+                                        {{/each}}
+                                    </tr>
+                                    <tr>
+                                        <td class="nomHerrTrabajoB">Otros</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrTrabajoB">{{punTrabajoB.otros}}</td>
+                                        {{/each}}
+                                    </tr>
+                                </tbody>                        
+                            </table>
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafTrabajoB"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- TrabajoC -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: HERRAMIENTAS DE TRABAJO COLABORATIVO</h4>
+                                <h5>Para la creación de sitios web o blogs educativos</h5>                                
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomTrabajoC text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrTrabajoC">Blogger</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrTrabajoC">{{punTrabajoC.blogger}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrTrabajoC">WordPress</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrTrabajoC">{{punTrabajoC.wordPress}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrTrabajoC">Wix</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrTrabajoC">{{punTrabajoC.wix}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrTrabajoC">TypePad</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrTrabajoC">{{punTrabajoC.typePad}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrTrabajoC">Technorati</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrTrabajoC">{{punTrabajoC.technorati}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrTrabajoC">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrTrabajoC">{{punTrabajoC.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>                        
+                                </table>                            
+                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafTrabajoC"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- OVA -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: HERRAMIENTAS PARA LA CREACIÓN DE OBJETOS VIRTUALES DE APRENDIZAJE (OVA)</h4>
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomOva text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrOva">ExeLearning</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrOva">{{punOva.exeLearning}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrOva">Reload Scorm Editor - Reload Scorm Player</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrOva">{{punOva.reload}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrOva">CourseLab</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrOva">{{punOva.courseLab}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrOva">Constructor</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrOva">{{punOva.constructor}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrOva">Ardora</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrOva">{{punOva.ardora}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrOva">Udutu</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrOva">{{punOva.udutu}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrOva">H5P</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrOva">{{punOva.h5p}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrOva">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrOva">{{punOva.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>                        
+                                </table>                            
+                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafOva"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- Video -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: HERRAMIENTAS PARA EL MANEJO DE VIDEO</h4>
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomVideo text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrVideo">Screencast-O-Matic</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideo">{{punVideo.screenCast}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideo">Movie Maker</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideo">{{punVideo.movieMaker}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideo">YouTube</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideo">{{punVideo.youTube}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideo">TeacherTube</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideo">{{punVideo.teacherTube}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideo">Vimeo</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideo">{{punVideo.vimeo}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideo">Blip.tv</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideo">{{punVideo.blip}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideo">Ustream</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideo">{{punVideo.ustream}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideo">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideo">{{punVideo.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>                        
+                                </table>                            
+                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafVideo"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- Audio -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: HERRAMIENTAS PARA EL MANEJO DE AUDIO</h4>
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomAudio text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrAudio">Audacity</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrAudio">{{punAudio.audacity}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrAudio">Odeo</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrAudio">{{punAudio.odeo}}</td>
+                                            {{/each}}
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="nomHerrAudio">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrAudio">{{punAudio.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>                        
+                                </table>                            
+                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafAudio"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- TextoImagenes -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: HERRAMIENTAS PARA EL MANEJO DE TEXTOS E IMÁGENES</h4>
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomTextoImagenes text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrTextoImagenes">http://canva.com</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrTextoImagenes">{{punTextoImagenes.canva}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrTextoImagenes">http://es.cooltext.com</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrTextoImagenes">{{punTextoImagenes.cootext}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrTextoImagenes">https://pixlr.com/editor/?loc=es</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrTextoImagenes">{{punTextoImagenes.pixlr}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrTextoImagenes">Filckr</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrTextoImagenes">{{punTextoImagenes.filckr}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrTextoImagenes">Photobucket</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrTextoImagenes">{{punTextoImagenes.photobucket}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrTextoImagenes">FlickrCC</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrTextoImagenes">{{punTextoImagenes.flickrCC}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrTextoImagenes">Picnik</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrTextoImagenes">{{punTextoImagenes.picnik}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrTextoImagenes">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrTextoImagenes">{{punTextoImagenes.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>                        
+                                </table>                            
+                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafTextoImagenes"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- Presentacion -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: HERRAMIENTAS PARA PRESENTACIONES EN LA NUBE</h4>
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomPresentacion text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrPresentacion">Prezi</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrPresentacion">{{punPresentacion.prezi}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrPresentacion">Slideshare</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrPresentacion">{{punPresentacion.slideshare}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrPresentacion">Scribd</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrPresentacion">{{punPresentacion.scribd}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrPresentacion">Powtoon</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrPresentacion">{{punPresentacion.powtoon}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrPresentacion">Genially</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrPresentacion">{{punPresentacion.genially}}</td>
+                                            {{/each}}
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="nomHerrPresentacion">H5P</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrPresentacion">{{punPresentacion.h5p}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrPresentacion">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrPresentacion">{{punPresentacion.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>                        
+                                </table>                            
+                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafPresentacion"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- VideoConferencia -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: HERRAMIENTAS PARA VIDEOCONFERENCIAS Y REUNIONES ONLINE</h4>
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomVideoConferencia text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrVideoConferencia">Skype</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideoConferencia">{{punVideoConferencia.skype}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideoConferencia">Zoom</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideoConferencia">{{punVideoConferencia.zoom}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideoConferencia">Skype Empresarial (Lync)</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideoConferencia">{{punVideoConferencia.skypeEmpresarial}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideoConferencia">Haungounts _ Hangouts en vivo</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideoConferencia">{{punVideoConferencia.haungounts}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideoConferencia">Webconference</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideoConferencia">{{punVideoConferencia.webconference}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideoConferencia">Appear.in</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideoConferencia">{{punVideoConferencia.appear}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideoConferencia">Join.me</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideoConferencia">{{punVideoConferencia.join}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideoConferencia">Dimdim</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideoConferencia">{{punVideoConferencia.dimdim}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrVideoConferencia">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrVideoConferencia">{{punVideoConferencia.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>                        
+                                </table>                            
+                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafVideoConferencia"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>            
+            <!-- ComunidadesA -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body text-center">
+                        <div class="row">
+                            <div class="col-md-7">
+                            <h4>Resultados: HERRAMIENTAS PARA COMUNIDADES</h4>
+                            <h5>Redes sociales</h5>
+                            <table>
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th></th>
+                                        {{#each resHerr}}
+                                        <th class="nomComunidadesA text-center">{{nombre}}</th>                                            
+                                        {{/each}}
+                                    </tr>                                        
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="nomHerrComunidadesA">Facebook</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrComunidadesA">{{punComunidadesA.facebook}}</td>
+                                        {{/each}}
+                                    </tr>
+                                    <tr>
+                                        <td class="nomHerrComunidadesA">Linkedin</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrComunidadesA">{{punComunidadesA.linkedin}}</td>
+                                        {{/each}}
+                                    </tr>
+                                    <tr>
+                                        <td class="nomHerrComunidadesA">Xing</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrComunidadesA">{{punComunidadesA.xing}}</td>
+                                        {{/each}}
+                                    </tr>
+                                    <tr>
+                                        <td class="nomHerrComunidadesA">Twitter</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrComunidadesA">{{punComunidadesA.twitter}}</td>
+                                        {{/each}}
+                                    </tr>
+                                    <tr>
+                                        <td class="nomHerrComunidadesA">Google Groups</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrComunidadesA">{{punComunidadesA.googleGroups}}</td>
+                                        {{/each}}
+                                    </tr>
+                                    <tr>
+                                        <td class="nomHerrComunidadesA">Yahoo Groups</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrComunidadesA">{{punComunidadesA.yahooGroups}}</td>
+                                        {{/each}}
+                                    </tr>
+                                    <tr>
+                                        <td class="nomHerrComunidadesA">Otros</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrComunidadesA">{{punComunidadesA.otros}}</td>
+                                        {{/each}}
+                                    </tr>
+                                </tbody>                        
+                            </table>
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafComunidadesA"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- ComunidadesB -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                            <h4>Resultados: HERRAMIENTAS PARA COMUNIDADES</h4>
+                            <h5>Mundos Virtuales</h5>
+                            <table>
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th></th>
+                                        {{#each resHerr}}
+                                        <th class="nomComunidadesB text-center">{{nombre}}</th>                                            
+                                        {{/each}}
+                                    </tr>                                        
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="nomHerrComunidadesB">Second Life</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrComunidadesB">{{punComunidadesB.secondLife}}</td>
+                                        {{/each}}
+                                    </tr>                                    
+                                    <tr>
+                                        <td class="nomHerrComunidadesB">Otros</td>
+                                        {{#each resHerr}}
+                                        <td class="punHerrComunidadesB">{{punComunidadesB.otros}}</td>
+                                        {{/each}}
+                                    </tr>
+                                </tbody>                        
+                            </table>
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafComunidadesB"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- ComunidadesC -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: HERRAMIENTAS PARA COMUNIDADES</h4>
+                                <h5>BooksMarks y Agregadores RSS</h5>                                
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomComunidadesC text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrComunidadesC">Delicious</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrComunidadesC">{{punComunidadesC.delicious}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrComunidadesC">Digg</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrComunidadesC">{{punComunidadesC.digg}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrComunidadesC">Meneame</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrComunidadesC">{{punComunidadesC.meneame}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrComunidadesC">Diigo</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrComunidadesC">{{punComunidadesC.diigo}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrComunidadesC">Bloglines</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrComunidadesC">{{punComunidadesC.bloglines}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrComunidadesC">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrComunidadesC">{{punComunidadesC.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>                        
+                                </table>                            
+                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafComunidadesC"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- Bibliografia -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: HERRAMIENTAS PARA TRATAMIENTO BIBLIOGRÁFICO</h4>                       
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomBibliografia text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrBibliografia">Zootero</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrBibliografia">{{punBibliografia.zootero}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrBibliografia">Mendeley</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrBibliografia">{{punBibliografia.mendeley}}</td>
+                                            {{/each}}
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="nomHerrBibliografia">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrBibliografia">{{punBibliografia.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>                        
+                                </table>                            
+                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafBibliografia"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- Mapas -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: HERRAMIENTAS PARA LA CREACIÓN DE MAPAS MENTALES</h4>
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomMapas text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrMapas">Cmaptools</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrMapas">{{punMapas.cmaptools}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrMapas">FreeMind</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrMapas">{{punMapas.freeMind}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrMapas">Bubb.us</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrMapas">{{punMapas.bubb}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrMapas">Mindomo.com</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrMapas">{{punMapas.mindomo}}</td>
+                                            {{/each}}
+                                        </tr>                                   
+                                        <tr>
+                                            <td class="nomHerrMapas">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrMapas">{{punMapas.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>                        
+                                </table>                            
+                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafMapas"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- Lineas -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: HERRAMIENTAS PARA LA CREACIÓN DE LÍNEAS DE TIEMPO</h4>
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomLineas text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrLineas">https://www.tiki_toki.com/</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrLineas">{{punLineas.tiki}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrLineas">https://time.graphics/</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrLineas">{{punLineas.time}}</td>
+                                            {{/each}}
+                                        </tr>                                  
+                                        <tr>
+                                            <td class="nomHerrLineas">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrLineas">{{punLineas.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>
+                                </table>                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafLineas"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- Actividades -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: HERRAMIENTAS PARA LA CREACIÓN DE ACTIVIDADES DIGITALES LÚDICAS</h4>                                                         
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomActividades text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrActividades">Hot Potatoes</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrActividades">{{punActividades.hotPotatoes}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrActividades">Ardora</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrActividades">{{punActividades.ardora}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrActividades">Educaplay</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrActividades">{{punActividades.educaplay}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrActividades">H5P</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrActividades">{{punActividades.h5p}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrActividades">Genially</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrActividades">{{punActividades.genially}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrActividades">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrActividades">{{punActividades.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>
+                                </table>                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafActividades"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- LMS -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: SISTEMAS ADMINISTRADORES DE APRENDIZAJE (LMS)</h4>                                                         
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomLMS text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrLMS">Moodle</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrLMS">{{punLMS.moodle}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrLMS">Claroline</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrLMS">{{punLMS.claroline}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrLMS">Chamilo</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrLMS">{{punLMS.chamilo}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrLMS">ATutor</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrLMS">{{punLMS.aTutor}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrLMS">Edmodo</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrLMS">{{punLMS.edmodo}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrLMS">Google Scholar</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrLMS">{{punLMS.googleScholar}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrLMS">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrLMS">{{punLMS.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>
+                                </table>                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafLMS"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- ComunicacionGestion -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: HERRAMIENTAS PARA COMUNICACIÓN Y GESTIÓN</h4>                                                         
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomComunicacionGestion text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrComunicacionGestion">Correo electrónico</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrComunicacionGestion">{{punComunicacionGestion.correo}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrComunicacionGestion">Paquetes de oficina (MS Office, LibreOffice, OpenOffice)</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrComunicacionGestion">{{punComunicacionGestion.office}}</td>
+                                            {{/each}}
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="nomHerrComunicacionGestion">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrComunicacionGestion">{{punComunicacionGestion.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>
+                                </table>                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafComunicacionGestion"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- Estadistica -->
+            <div class="container p-2">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4>Resultados: HERRAMIENTAS ESTADÍSTICAS</h4>                                                         
+                                <table class="text-center">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th></th>
+                                            {{#each resHerr}}
+                                            <th class="nomEstadistica text-center">{{nombre}}</th>                                            
+                                            {{/each}}
+                                        </tr>                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="nomHerrEstadistica">PSPP</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrEstadistica">{{punEstadistica.pspp}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrEstadistica">R</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrEstadistica">{{punEstadistica.r}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrEstadistica">Calc</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrEstadistica">{{punEstadistica.calc}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrEstadistica">SPSS</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrEstadistica">{{punEstadistica.spss}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        <tr>
+                                            <td class="nomHerrEstadistica">Otros</td>
+                                            {{#each resHerr}}
+                                            <td class="punHerrEstadistica">{{punEstadistica.otros}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </tbody>
+                                </table>                            
+                            </div>
+                            <div class="col-md-5 align-self-center">
+                                <h4>Gráfica</h4>
+                                <center><div id="grafEstadistica"></div></center>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="container p-2">
+                
+                <div class="row">
+                    <div class="col-md-8">
+                        <form action="/resultadosbusqueda" method="POST">
+                            <div class="row">
+                                <div class="form-group">
+                                    <h3>Realizar Nueva Búsqueda</h3>
+                                    <h4>Establecer Criterios</h4>
+                                    <select class="form-control" name="selecCriterio" id="selecCriterio">
+                                        <option>Búsqueda por Institución</option>
+                                        <option>Búsqueda por Ciclo Propedéutico</option>
+                                        <option>Búsqueda por Área de Especialización</option>
+                                        <option>Búsqueda por Género</option>
+                                        <option>Búsqueda por Tipo de Asignatura</option>
+                                        <option>Búsqueda por Formación en la ETIC</option>
+                                        <option>Búsqueda por Facultad</option>
+                                    </select>
+
+                                    <div class="col">
+                                        <label>¿Desea realizar la búsqueda teniendo en cuenta el año?</label>
+                                        <input type="radio" name="año" id="añoSi" value="Si">
+                                        <label for="añoSi">Si</label>
+                                        <input type="radio" name="año" id="añoNo" value="No" checked>
+                                        <label for="añoNo">No</label>
+                                        <div class="escondido m-2" id="selecAño">
+                                            <label for="selecAño">Elija el año</label>
+                                            <select class="form-control" name="selecAño">
+                                                {{#each años}}
+                                                    <option>{{n_año}}</option>
+                                                {{/each}}
+                                            </select>
+                                        </div>                                            
+                                    </div>
+
+                                    <div class="escondido m-2" id="selecFacultad">
+                                        <label for="selecFacultad">Elija de qué Instintución</label>
+                                            <select class="form-control" name="selecFacultad">
+                                                {{#each instituciones}}
+                                                    <option>{{n_nombre}}</option>
+                                                {{/each}}
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <button class="primary">Realizar Búsqueda</button>
+                                    <a href="/homeAdmin">
+                                        <input  type="button" value="Volver">
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                        
+            
+        </div>
+        
+    </div>
+    {{> footer}}
+</body>

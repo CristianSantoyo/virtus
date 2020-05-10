@@ -1,0 +1,1237 @@
+<script type="text/javascript" src="/script/scriptCompentencias.js"></script>
+<body>
+    {{> navUsuario}}
+    <section id="encuestaCompetencias" class="wrapper">
+        <div class="container p-6">
+            <h1>Seleccione la carreta que considere pertinente a su personal</h1>
+        </div>
+        <form action="/encuestaCompetencias/" method="POST" id="formCompetencias">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>            
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <div class="container p-6">
+                        <hr>
+                        <h2>Preguntas para medir competencias Tecnológicas</h2>	
+                        <!-- Estructura 2 columnas  -->
+                        <div class="row">
+
+                            <!-- Estructura pregunta -->	
+                            <div class="col-3 col-12-medium">				
+                                <h4>Pregunta 1</h4>
+                            </div>
+                            <div class="col-9 col-12-medium">
+                                <p>
+                                    Identifico las características, usos
+                                    y oportunidades que ofrecen
+                                    herramientas tecnológicas y
+                                    medios audiovisuales, en los
+                                    procesos educativos. 
+                                </p>						
+                                <input type="radio" id="tec_radio_1_MuyFrecuentemente" name="tec_radio_1" value="MuyFrecuentemente" class="tecnologicas1" required>
+                                <label for="tec_radio_1_MuyFrecuentemente">Muy frecuentemente</label>
+                                <input type="radio" id="tec_radio_1_Frecuente" name="tec_radio_1" value="Frecuente" class="tecnologicas1">
+                                <label for="tec_radio_1_Frecuente">Frecuente</label>
+                                <input type="radio" id="tec_radio_1_Ocasionalmente" name="tec_radio_1" value="Ocasionalmente" class="tecnologicas1">
+                                <label for="tec_radio_1_Ocasionalmente">Ocasionalmente</label>
+                                <input type="radio" id="tec_radio_1_Raramente" name="tec_radio_1" value="Raramente" class="tecnologicas1">
+                                <label for="tec_radio_1_Raramente">Raramente</label>
+                                <input type="radio" id="tec_radio_1_Nunca" name="tec_radio_1" value="Nunca" class="tecnologicas1">
+                                <label for="tec_radio_1_Nunca">Nunca</label>
+                            </div>
+                            <!-- Fin Pregunta -->
+                            <!-- Estructura pregunta -->
+                            <div class="col-3 col-12-medium">				
+                                <h4>Pregunta 2</h4>
+                            </div>
+                            <div class="col-9 col-12-medium">
+                                <p>
+                                    ¿El proceso de desarrollo profesional atiende los Elaboro actividades de
+                                    aprendizaje utilizando
+                                    aplicativos, contenidos,
+                                    herramientas informáticas y
+                                    medios audiovisuales.
+                                </p>
+                                <input type="radio" id="tec_radio_2_MuyFrecuentemente" name="tec_radio_2" value="MuyFrecuentemente" class="tecnologicas1" required>
+                                <label for="tec_radio_2_MuyFrecuentemente">Muy frecuentemente</label>
+                                <input type="radio" id="tec_radio_2_Frecuente" name="tec_radio_2" value="Frecuente" class="tecnologicas1">
+                                <label for="tec_radio_2_Frecuente">Frecuente</label>
+                                <input type="radio" id="tec_radio_2_Ocasionalmente" name="tec_radio_2" value="Ocasionalmente" class="tecnologicas1">
+                                <label for="tec_radio_2_Ocasionalmente">Ocasionalmente</label>
+                                <input type="radio" id="tec_radio_2_Raramente" name="tec_radio_2" value="Raramente" class="tecnologicas1">
+                                <label for="tec_radio_2_Raramente">Raramente</label>
+                                <input type="radio" id="tec_radio_2_Nunca" name="tec_radio_2" value="Nunca" class="tecnologicas1">
+                                <label for="tec_radio_2_Nunca">Nunca</label>
+                            </div>
+                            <!-- Fin Pregunta -->
+                            <!-- Estructura pregunta -->
+                            <div class="col-3 col-12-medium">				
+                                <h4>Pregunta 3</h4>
+                            </div>
+                            <div class="col-9 col-12-medium">
+                                <p>
+                                    Evalúo la calidad, pertinencia
+                                    y veracidad de la información
+                                    disponible en diversos
+                                    medios como portales
+                                    educativos y especializados,
+                                    motores de busqueda y
+                                    material audiovisual 						
+                                </p>
+                                <input type="radio" id="tec_radio_3_MuyFrecuentemente" name="tec_radio_3" value="MuyFrecuentemente" class="tecnologicas1" required>
+                                <label for="tec_radio_3_MuyFrecuentemente">Muy frecuentemente</label>
+                                <input type="radio" id="tec_radio_3_Frecuente" name="tec_radio_3" value="Frecuente" class="tecnologicas1">
+                                <label for="tec_radio_3_Frecuente">Frecuente</label>
+                                <input type="radio" id="tec_radio_3_Ocasionalmente" name="tec_radio_3" value="Ocasionalmente" class="tecnologicas1">
+                                <label for="tec_radio_3_Ocasionalmente">Ocasionalmente</label>
+                                <input type="radio" id="tec_radio_3_Raramente" name="tec_radio_3" value="Raramente" class="tecnologicas1">
+                                <label for="tec_radio_3_Raramente">Raramente</label>
+                                <input type="radio" id="tec_radio_3_Nunca" name="tec_radio_3" value="Nunca" class="tecnologicas1">
+                                <label for="tec_radio_3_Nunca">Nunca</label>
+                            </div>
+                            <!-- Fin Pregunta -->
+                            <!-- Estructura pregunta -->
+                            <div class="col-3 col-12-medium">				
+                                <h4>Pregunta 4</h4>
+                            </div>
+                            <div class="col-9 col-12-medium">
+                                <p>
+                                    Combino una amplia variedad
+                                    de herramientas tecnológicas
+                                    para mejorar la planeación
+                                    e implementación de mis
+                                    prácticas educativas. 
+                                </p>
+                                <input type="radio" id="tec_radio_4_MuyFrecuentemente" name="tec_radio_4" value="MuyFrecuentemente" class="tecnologicas2" required>
+                                <label for="tec_radio_4_MuyFrecuentemente">Muy frecuentemente</label>
+                                <input type="radio" id="tec_radio_4_Frecuente" name="tec_radio_4" value="Frecuente" class="tecnologicas2">
+                                <label for="tec_radio_4_Frecuente">Frecuente</label>
+                                <input type="radio" id="tec_radio_4_Ocasionalmente" name="tec_radio_4" value="Ocasionalmente" class="tecnologicas2">
+                                <label for="tec_radio_4_Ocasionalmente">Ocasionalmente</label>
+                                <input type="radio" id="tec_radio_4_Raramente" name="tec_radio_4" value="Raramente" class="tecnologicas2">
+                                <label for="tec_radio_4_Raramente">Raramente</label>
+                                <input type="radio" id="tec_radio_4_Nunca" name="tec_radio_4" value="Nunca" class="tecnologicas2">
+                                <label for="tec_radio_4_Nunca">Nunca</label>
+                            </div>
+                            <!-- Fin Pregunta -->
+                            <!-- Estructura pregunta -->
+                            <div class="col-3 col-12-medium">				
+                                <h4>Pregunta 5</h4>
+                            </div>
+                            <div class="col-9 col-12-medium">
+                                <p>
+                                    Diseño y publico contenidos
+                                    digitales u objetos virtuales
+                                    de aprendizaje mediante el
+                                    uso adecuado de herramientas
+                                    tecnológicas.
+                                </p>
+                                <input type="radio" id="tec_radio_5_MuyFrecuentemente" name="tec_radio_5" value="MuyFrecuentemente" class="tecnologicas2" required>
+                                <label for="tec_radio_5_MuyFrecuentemente">Muy frecuentemente</label>
+                                <input type="radio" id="tec_radio_5_Frecuente" name="tec_radio_5" value="Frecuente" class="tecnologicas2">
+                                <label for="tec_radio_5_Frecuente">Frecuente</label>
+                                <input type="radio" id="tec_radio_5_Ocasionalmente" name="tec_radio_5" value="Ocasionalmente" class="tecnologicas2">
+                                <label for="tec_radio_5_Ocasionalmente">Ocasionalmente</label>
+                                <input type="radio" id="tec_radio_5_Raramente" name="tec_radio_5" value="Raramente" class="tecnologicas2">
+                                <label for="tec_radio_5_Raramente">Raramente</label>
+                                <input type="radio" id="tec_radio_5_Nunca" name="tec_radio_5" value="Nunca" class="tecnologicas2">
+                                <label for="tec_radio_5_Nunca">Nunca</label>
+                            </div>
+                            <!-- Fin Pregunta -->
+                            <!-- Estructura pregunta -->
+                            <div class="col-3 col-12-medium">				
+                                <h4>Pregunta 6</h4>
+                            </div>
+                            <div class="col-9 col-12-medium">
+                                <p>
+                                    Analizo los riesgos y
+                                    potencialidades de
+                                    publicar y compartir
+                                    distintos tipos de
+                                    información a través
+                                    de Internet.
+                                </p>
+                                <input type="radio" id="tec_radio_6_MuyFrecuentemente" name="tec_radio_6" value="MuyFrecuentemente" class="tecnologicas2" required>
+                                <label for="tec_radio_6_MuyFrecuentemente">Muy frecuentemente</label>
+                                <input type="radio" id="tec_radio_6_Frecuente" name="tec_radio_6" value="Frecuente" class="tecnologicas2">
+                                <label for="tec_radio_6_Frecuente">Frecuente</label>
+                                <input type="radio" id="tec_radio_6_Ocasionalmente" name="tec_radio_6" value="Ocasionalmente" class="tecnologicas2">
+                                <label for="tec_radio_6_Ocasionalmente">Ocasionalmente</label>
+                                <input type="radio" id="tec_radio_6_Raramente" name="tec_radio_6" value="Raramente" class="tecnologicas2">
+                                <label for="tec_radio_6_Raramente">Raramente</label>
+                                <input type="radio" id="tec_radio_6_Nunca" name="tec_radio_6" value="Nunca" class="tecnologicas2">
+                                <label for="tec_radio_6_Nunca">Nunca</label>
+                            </div>
+                            <!-- Fin Pregunta -->
+                            <!-- Estructura pregunta -->
+                            <div class="col-3 col-12-medium">				
+                                <h4>Pregunta 7</h4>
+                            </div>
+                            <div class="col-9 col-12-medium">
+                                <p>
+                                    Utilizo herramientas tecnológicas
+                                    complejas o especializadas para
+                                    diseñar ambientes virtuales de
+                                    aprendizaje que favorecen el
+                                    desarrollo de competencias
+                                    en mis estudiantes y
+                                    la conformación de
+                                    comunidades y/o redes
+                                    de aprendizaje.
+                                </p>
+                                <input type="radio" id="tec_radio_7_MuyFrecuentemente" name="tec_radio_7" value="MuyFrecuentemente" class="tecnologicas3" required>
+                                <label for="tec_radio_7_MuyFrecuentemente">Muy frecuentemente</label>
+                                <input type="radio" id="tec_radio_7_Frecuente" name="tec_radio_7" value="Frecuente" class="tecnologicas3">
+                                <label for="tec_radio_7_Frecuente">Frecuente</label>
+                                <input type="radio" id="tec_radio_7_Ocasionalmente" name="tec_radio_7" value="Ocasionalmente" class="tecnologicas3">
+                                <label for="tec_radio_7_Ocasionalmente">Ocasionalmente</label>
+                                <input type="radio" id="tec_radio_7_Raramente" name="tec_radio_7" value="Raramente" class="tecnologicas3">
+                                <label for="tec_radio_7_Raramente">Raramente</label>
+                                <input type="radio" id="tec_radio_7_Nunca" name="tec_radio_7" value="Nunca" class="tecnologicas3">
+                                <label for="tec_radio_7_Nunca">Nunca</label>
+                            </div>
+                            <!-- Fin Pregunta -->					
+                            <!-- Estructura pregunta -->
+                            <div class="col-3 col-12-medium">				
+                                <h4>Pregunta 8</h4>
+                            </div>
+                            <div class="col-9 col-12-medium">
+                                <p>
+                                    Utilizo herramientas
+                                    tecnológicas para ayudar a
+                                    mis estudiantes a construir
+                                    aprendizajes significativos
+                                    y desarrollar pensamiento
+                                    crítico.
+                                </p>
+                                <input type="radio" id="tec_radio_8_MuyFrecuentemente" name="tec_radio_8" value="MuyFrecuentemente" class="tecnologicas3" required>
+                                <label for="tec_radio_8_MuyFrecuentemente">Muy frecuentemente</label>
+                                <input type="radio" id="tec_radio_8_Frecuente" name="tec_radio_8" value="Frecuente" class="tecnologicas3">
+                                <label for="tec_radio_8_Frecuente">Frecuente</label>
+                                <input type="radio" id="tec_radio_8_Ocasionalmente" name="tec_radio_8" value="Ocasionalmente" class="tecnologicas3">
+                                <label for="tec_radio_8_Ocasionalmente">Ocasionalmente</label>
+                                <input type="radio" id="tec_radio_8_Raramente" name="tec_radio_8" value="Raramente" class="tecnologicas3">
+                                <label for="tec_radio_8_Raramente">Raramente</label>
+                                <input type="radio" id="tec_radio_8_Nunca" name="tec_radio_8" value="Nunca" class="tecnologicas3">
+                                <label for="tec_radio_8_Nunca">Nunca</label>
+                            </div>
+                            <!-- Fin Pregunta -->						
+                            <!-- Estructura pregunta -->
+                            <div class="col-3 col-12-medium">				
+                                <h4>Pregunta 9</h4>
+                            </div>
+                            <div class="col-9 col-12-medium">
+                                <p>
+                                    Utilizo las TIC para aprender
+                                    por iniciativa personal y para
+                                    actualizar los conocimientos
+                                    y prácticas propios de mi
+                                    disciplina. 
+                                </p>
+                                <input type="radio" id="tec_radio_9_MuyFrecuentemente" name="tec_radio_9" value="MuyFrecuentemente" class="tecnologicas3" required>
+                                <label for="tec_radio_9_MuyFrecuentemente">Muy frecuentemente</label>
+                                <input type="radio" id="tec_radio_9_Frecuente" name="tec_radio_9" value="Frecuente" class="tecnologicas3">
+                                <label for="tec_radio_9_Frecuente">Frecuente</label>
+                                <input type="radio" id="tec_radio_9_Ocasionalmente" name="tec_radio_9" value="Ocasionalmente" class="tecnologicas3">
+                                <label for="tec_radio_9_Ocasionalmente">Ocasionalmente</label>
+                                <input type="radio" id="tec_radio_9_Raramente" name="tec_radio_9" value="Raramente" class="tecnologicas3">
+                                <label for="tec_radio_9_Raramente">Raramente</label>
+                                <input type="radio" id="tec_radio_9_Nunca" name="tec_radio_9" value="Nunca" class="tecnologicas3">
+                                <label for="tec_radio_9_Nunca">Nunca</label>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    
+                    <!-- Fin Pregunta -->
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container p-6">
+                            <hr>
+                            <h2>Preguntas para medir competencias de Pedagogía</h2>
+                            <div class="row">
+                                <!-- Estructura pregunta -->						
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 1</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Identifico problemáticas
+                                        educativas en mi práctica
+                                        docente y las oportunidades,
+                                        implicaciones y riesgos
+                                        del uso de las TIC para
+                                        atenderlas.
+                                    </p>
+                                    <input type="radio" id="ped_radio_1_MuyFrecuentemente" name="ped_radio_1" value="MuyFrecuentemente" class="pedagogicas1" required>
+                                    <label for="ped_radio_1_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ped_radio_1_Frecuente" name="ped_radio_1" value="Frecuente" class="pedagogicas1">
+                                    <label for="ped_radio_1_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ped_radio_1_Ocasionalmente" name="ped_radio_1" value="Ocasionalmente" class="pedagogicas1">
+                                    <label for="ped_radio_1_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ped_radio_1_Raramente" name="ped_radio_1" value="Raramente" class="pedagogicas1">
+                                    <label for="ped_radio_1_Raramente">Raramente</label>
+                                    <input type="radio" id="ped_radio_1_Nunca" name="ped_radio_1" value="Nunca" class="pedagogicas1">
+                                    <label for="ped_radio_1_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 2</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Identifico problemáticas
+                                        educativas en mi práctica
+                                        docente y las oportunidades,
+                                        implicaciones y riesgos
+                                        del uso de las TIC para
+                                        atenderlas.
+                                    </p>
+                                    <input type="radio" id="ped_radio_2_MuyFrecuentemente" name="ped_radio_2" value="MuyFrecuentemente" class="pedagogicas1" required>
+                                    <label for="ped_radio_2_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ped_radio_2_Frecuente" name="ped_radio_2" value="Frecuente" class="pedagogicas1">
+                                    <label for="ped_radio_2_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ped_radio_2_Ocasionalmente" name="ped_radio_2" value="Ocasionalmente" class="pedagogicas1">
+                                    <label for="ped_radio_2_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ped_radio_2_Raramente" name="ped_radio_2" value="Raramente" class="pedagogicas1">
+                                    <label for="ped_radio_2_Raramente">Raramente</label>
+                                    <input type="radio" id="ped_radio_2_Nunca" name="ped_radio_2" value="Nunca" class="pedagogicas1">
+                                    <label for="ped_radio_2_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 3</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Incentivo en mis estudiantes
+                                        el aprendizaje autónomo y
+                                        el aprendizaje colaborativo
+                                        apoyados por TIC.			
+                                    </p>
+                                    <input type="radio" id="ped_radio_3_MuyFrecuentemente" name="ped_radio_3" value="MuyFrecuentemente" class="pedagogicas1" required>
+                                    <label for="ped_radio_3_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ped_radio_3_Frecuente" name="ped_radio_3" value="Frecuente" class="pedagogicas1">
+                                    <label for="ped_radio_3_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ped_radio_3_Ocasionalmente" name="ped_radio_3" value="Ocasionalmente" class="pedagogicas1">
+                                    <label for="ped_radio_3_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ped_radio_3_Raramente" name="ped_radio_3" value="Raramente" class="pedagogicas1">
+                                    <label for="ped_radio_3_Raramente">Raramente</label>
+                                    <input type="radio" id="ped_radio_3_Nunca" name="ped_radio_3" value="Nunca" class="pedagogicas1">
+                                    <label for="ped_radio_3_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 4</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Utilizo TIC con mis estudiantes
+                                        para atender sus necesidades
+                                        e intereses y proponer
+                                        soluciones a problemas de
+                                        aprendizaje.
+                                    </p>
+                                    <input type="radio" id="ped_radio_4_MuyFrecuentemente" name="ped_radio_4" value="MuyFrecuentemente" class="pedagogicas2" required>
+                                    <label for="ped_radio_4_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ped_radio_4_Frecuente" name="ped_radio_4" value="Frecuente" class="pedagogicas2">
+                                    <label for="ped_radio_4_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ped_radio_4_Ocasionalmente" name="ped_radio_4" value="Ocasionalmente" class="pedagogicas2">
+                                    <label for="ped_radio_4_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ped_radio_4_Raramente" name="ped_radio_4" value="Raramente" class="pedagogicas2">
+                                    <label for="ped_radio_4_Raramente">Raramente</label>
+                                    <input type="radio" id="ped_radio_4_Nunca" name="ped_radio_4" value="Nunca" class="pedagogicas2">
+                                    <label for="ped_radio_4_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 5</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Implemento estrategias
+                                        didácticas mediadas por
+                                        TIC, para fortalecer en mis
+                                        estudiantes aprendizajes
+                                        que les permitan resolver
+                                        problemas de la vida real.
+                                    </p>
+                                    <input type="radio" id="ped_radio_5_MuyFrecuentemente" name="ped_radio_5" value="MuyFrecuentemente" class="pedagogicas2" required>
+                                    <label for="ped_radio_5_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ped_radio_5_Frecuente" name="ped_radio_5" value="Frecuente" class="pedagogicas2">
+                                    <label for="ped_radio_5_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ped_radio_5_Ocasionalmente" name="ped_radio_5" value="Ocasionalmente" class="pedagogicas2">
+                                    <label for="ped_radio_5_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ped_radio_5_Raramente" name="ped_radio_5" value="Raramente" class="pedagogicas2">
+                                    <label for="ped_radio_5_Raramente">Raramente</label>
+                                    <input type="radio" id="ped_radio_5_Nunca" name="ped_radio_5" value="Nunca" class="pedagogicas2">
+                                    <label for="ped_radio_5_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 6</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Diseño ambientes de
+                                        aprendizaje mediados por
+                                        TIC de acuerdo con el
+                                        desarrollo cognitivo, físico,
+                                        psicológico y social de
+                                        mis estudiantes para
+                                        fomentar el desarrollo
+                                        de sus competencias.
+                                    </p>
+                                    <input type="radio" id="ped_radio_6_MuyFrecuentemente" name="ped_radio_6" value="MuyFrecuentemente" class="pedagogicas2" required>
+                                    <label for="ped_radio_6_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ped_radio_6_Frecuente" name="ped_radio_6" value="Frecuente" class="pedagogicas2">
+                                    <label for="ped_radio_6_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ped_radio_6_Ocasionalmente" name="ped_radio_6" value="Ocasionalmente" class="pedagogicas2">
+                                    <label for="ped_radio_6_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ped_radio_6_Raramente" name="ped_radio_6" value="Raramente" class="pedagogicas2">
+                                    <label for="ped_radio_6_Raramente">Raramente</label>
+                                    <input type="radio" id="ped_radio_6_Nunca" name="ped_radio_6" value="Nunca" class="pedagogicas2">
+                                    <label for="ped_radio_6_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 7</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Propongo proyectos
+                                        educativos mediados
+                                        con TIC, que permiten
+                                        la reflexión sobre el
+                                        aprendizaje propio
+                                        y la producción de
+                                        conocimiento. 
+                                    </p>
+                                    <input type="radio" id="ped_radio_7_MuyFrecuentemente" name="ped_radio_7" value="MuyFrecuentemente" class="pedagogicas3" required>
+                                    <label for="ped_radio_7_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ped_radio_7_Frecuente" name="ped_radio_7" value="Frecuente" class="pedagogicas3">
+                                    <label for="ped_radio_7_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ped_radio_7_Ocasionalmente" name="ped_radio_7" value="Ocasionalmente" class="pedagogicas3">
+                                    <label for="ped_radio_7_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ped_radio_7_Raramente" name="ped_radio_7" value="Raramente" class="pedagogicas3">
+                                    <label for="ped_radio_7_Raramente">Raramente</label>
+                                    <input type="radio" id="ped_radio_7_Nunca" name="ped_radio_7" value="Nunca" class="pedagogicas3">
+                                    <label for="ped_radio_7_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->					
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 8</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Utilizo herramientas
+                                        tecnológicas para ayudar a
+                                        mis estudiantes a construir
+                                        aprendizajes significativos
+                                        y desarrollar pensamiento
+                                        crítico.
+                                    </p>
+                                    <input type="radio" id="ped_radio_8_MuyFrecuentemente" name="ped_radio_8" value="MuyFrecuentemente" class="pedagogicas3" required>
+                                    <label for="ped_radio_8_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ped_radio_8_Frecuente" name="ped_radio_8" value="Frecuente" class="pedagogicas3">
+                                    <label for="ped_radio_8_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ped_radio_8_Ocasionalmente" name="ped_radio_8" value="Ocasionalmente" class="pedagogicas3">
+                                    <label for="ped_radio_8_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ped_radio_8_Raramente" name="ped_radio_8" value="Raramente" class="pedagogicas3">
+                                    <label for="ped_radio_8_Raramente">Raramente</label>
+                                    <input type="radio" id="ped_radio_8_Nunca" name="ped_radio_8" value="Nunca" class="pedagogicas3">
+                                    <label for="ped_radio_8_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->						
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 9</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Evalúo los resultados
+                                        obtenidos con la
+                                        implementación de
+                                        estrategias que hacen
+                                        uso de las TIC y
+                                        promuevo una cultura
+                                        del seguimiento,
+                                        realimentación
+                                        y mejoramiento
+                                        permanente.
+                                    </p>
+                                    <input type="radio" id="ped_radio_9_MuyFrecuentemente" name="ped_radio_9" value="MuyFrecuentemente" class="pedagogicas3" required>
+                                    <label for="ped_radio_9_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ped_radio_9_Frecuente" name="ped_radio_9" value="Frecuente" class="pedagogicas3">
+                                    <label for="ped_radio_9_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ped_radio_9_Ocasionalmente" name="ped_radio_9" value="Ocasionalmente" class="pedagogicas3">
+                                    <label for="ped_radio_9_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ped_radio_9_Raramente" name="ped_radio_9" value="Raramente" class="pedagogicas3">
+                                    <label for="ped_radio_9_Raramente">Raramente</label>
+                                    <input type="radio" id="ped_radio_9_Nunca" name="ped_radio_9" value="Nunca" class="pedagogicas3">
+                                    <label for="ped_radio_9_Nunca">Nunca</label>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="container p-6">
+                            <hr>
+                            <h2>Preguntas para medir competencias en Comunicación</h2>
+                            <div class="row">
+                                <!-- Estructura pregunta -->						
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 1</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Me comunico adecuadamente
+                                        con mis estudiantes y sus
+                                        familiares, mis colegas e
+                                        investigadores usando TIC
+                                        de manera sincrónica y
+                                        asincrónica.
+                                    </p>
+                                    <input type="radio" id="com_radio_1_MuyFrecuentemente" name="com_radio_1" value="MuyFrecuentemente" class="comunicacion1" required>
+                                    <label for="com_radio_1_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="com_radio_1_Frecuente" name="com_radio_1" value="Frecuente" class="comunicacion1">
+                                    <label for="com_radio_1_Frecuente">Frecuente</label>
+                                    <input type="radio" id="com_radio_1_Ocasionalmente" name="com_radio_1" value="Ocasionalmente" class="comunicacion1">
+                                    <label for="com_radio_1_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="com_radio_1_Raramente" name="com_radio_1" value="Raramente" class="comunicacion1">
+                                    <label for="com_radio_1_Raramente">Raramente</label>
+                                    <input type="radio" id="com_radio_1_Nunca" name="com_radio_1" value="Nunca" class="comunicacion1">
+                                    <label for="com_radio_1_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 2</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Navego eficientemente en
+                                        Internet integrando fragmentos
+                                        de información presentados de
+                                        forma no lineal.
+                                    </p>
+                                    <input type="radio" id="com_radio_2_MuyFrecuentemente" name="com_radio_2" value="MuyFrecuentemente" class="comunicacion1" required>
+                                    <label for="com_radio_2_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="com_radio_2_Frecuente" name="com_radio_2" value="Frecuente" class="comunicacion1">
+                                    <label for="com_radio_2_Frecuente">Frecuente</label>
+                                    <input type="radio" id="com_radio_2_Ocasionalmente" name="com_radio_2" value="Ocasionalmente" class="comunicacion1">
+                                    <label for="com_radio_2_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="com_radio_2_Raramente" name="com_radio_2" value="Raramente" class="comunicacion1">
+                                    <label for="com_radio_2_Raramente">Raramente</label>
+                                    <input type="radio" id="com_radio_2_Nunca" name="com_radio_2" value="Nunca" class="comunicacion1">
+                                    <label for="com_radio_2_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 3</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Evalúo la pertinencia de compartir
+                                        información a través de canales
+                                        públicos y masivos, respetando
+                                        las normas de propiedad
+                                        intelectual y licenciamiento. 			
+                                    </p>
+                                    <input type="radio" id="com_radio_3_MuyFrecuentemente" name="com_radio_3" value="MuyFrecuentemente" class="comunicacion1" required>
+                                    <label for="com_radio_3_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="com_radio_3_Frecuente" name="com_radio_3" value="Frecuente" class="comunicacion1">
+                                    <label for="com_radio_3_Frecuente">Frecuente</label>
+                                    <input type="radio" id="com_radio_3_Ocasionalmente" name="com_radio_3" value="Ocasionalmente" class="comunicacion1">
+                                    <label for="com_radio_3_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="com_radio_3_Raramente" name="com_radio_3" value="Raramente" class="comunicacion1">
+                                    <label for="com_radio_3_Raramente">Raramente</label>
+                                    <input type="radio" id="com_radio_3_Nunca" name="com_radio_3" value="Nunca" class="comunicacion1">
+                                    <label for="com_radio_3_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 4</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Participo activamente en redes
+                                        y comunidades de práctica
+                                        mediadas por TIC y facilito
+                                        la participación de mis
+                                        estudiantes en las mismas,
+                                        de una forma pertinente y
+                                        respetuosa. 
+                                    </p>
+                                    <input type="radio" id="com_radio_4_MuyFrecuentemente" name="com_radio_4" value="MuyFrecuentemente" class="comunicacion2" required>
+                                    <label for="com_radio_4_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="com_radio_4_Frecuente" name="com_radio_4" value="Frecuente" class="comunicacion2">
+                                    <label for="com_radio_4_Frecuente">Frecuente</label>
+                                    <input type="radio" id="com_radio_4_Ocasionalmente" name="com_radio_4" value="Ocasionalmente" class="comunicacion2">
+                                    <label for="com_radio_4_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="com_radio_4_Raramente" name="com_radio_4" value="Raramente" class="comunicacion2">
+                                    <label for="com_radio_4_Raramente">Raramente</label>
+                                    <input type="radio" id="com_radio_4_Nunca" name="com_radio_4" value="Nunca" class="comunicacion2">
+                                    <label for="com_radio_4_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 5</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Sistematizo y hago
+                                        seguimiento a experiencias
+                                        significativas de uso de TIC.
+                                    </p>
+                                    <input type="radio" id="com_radio_5_MuyFrecuentemente" name="com_radio_5" value="MuyFrecuentemente" class="comunicacion2" required>
+                                    <label for="com_radio_5_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="com_radio_5_Frecuente" name="com_radio_5" value="Frecuente" class="comunicacion2">
+                                    <label for="com_radio_5_Frecuente">Frecuente</label>
+                                    <input type="radio" id="com_radio_5_Ocasionalmente" name="com_radio_5" value="Ocasionalmente" class="comunicacion2">
+                                    <label for="com_radio_5_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="com_radio_5_Raramente" name="com_radio_5" value="Raramente" class="comunicacion2">
+                                    <label for="com_radio_5_Raramente">Raramente</label>
+                                    <input type="radio" id="com_radio_5_Nunca" name="com_radio_5" value="Nunca" class="comunicacion2">
+                                    <label for="com_radio_5_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 6</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Promuevo en la comunidad
+                                        educativa comunicaciones
+                                        efectivas que aportan al
+                                        mejoramiento de los
+                                        procesos de convivencia
+                                        escolar. 
+                                    </p>
+                                    <input type="radio" id="com_radio_6_MuyFrecuentemente" name="com_radio_6" value="MuyFrecuentemente" class="comunicacion2" required>
+                                    <label for="com_radio_6_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="com_radio_6_Frecuente" name="com_radio_6" value="Frecuente" class="comunicacion2">
+                                    <label for="com_radio_6_Frecuente">Frecuente</label>
+                                    <input type="radio" id="com_radio_6_Ocasionalmente" name="com_radio_6" value="Ocasionalmente" class="comunicacion2">
+                                    <label for="com_radio_6_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="com_radio_6_Raramente" name="com_radio_6" value="Raramente" class="comunicacion2">
+                                    <label for="com_radio_6_Raramente">Raramente</label>
+                                    <input type="radio" id="com_radio_6_Nunca" name="com_radio_6" value="Nunca" class="comunicacion2">
+                                    <label for="com_radio_6_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 7</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Interpreto y produzco
+                                        íconos, símbolos y otras
+                                        formas de representación
+                                        de la información, para ser
+                                        utilizados con propósitos
+                                        educativos. 
+                                    </p>
+                                    <input type="radio" id="com_radio_7_MuyFrecuentemente" name="com_radio_7" value="MuyFrecuentemente" class="comunicacion3" required>
+                                    <label for="com_radio_7_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="com_radio_7_Frecuente" name="com_radio_7" value="Frecuente" class="comunicacion3">
+                                    <label for="com_radio_7_Frecuente">Frecuente</label>
+                                    <input type="radio" id="com_radio_7_Ocasionalmente" name="com_radio_7" value="Ocasionalmente" class="comunicacion3">
+                                    <label for="com_radio_7_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="com_radio_7_Raramente" name="com_radio_7" value="Raramente" class="comunicacion3">
+                                    <label for="com_radio_7_Raramente">Raramente</label>
+                                    <input type="radio" id="com_radio_7_Nunca" name="com_radio_7" value="Nunca" class="comunicacion3">
+                                    <label for="com_radio_7_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->					
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 8</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Contribuyo con mis
+                                        conocimientos y los
+                                        de mis estudiantes
+                                        a repositorios de
+                                        la humanidad en
+                                        Internet, con
+                                        textos de diversa
+                                        naturaleza.
+                                    </p>
+                                    <input type="radio" id="com_radio_8_MuyFrecuentemente" name="com_radio_8" value="MuyFrecuentemente" class="comunicacion3" required>
+                                    <label for="com_radio_8_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="com_radio_8_Frecuente" name="com_radio_8" value="Frecuente" class="comunicacion3">
+                                    <label for="com_radio_8_Frecuente">Frecuente</label>
+                                    <input type="radio" id="com_radio_8_Ocasionalmente" name="com_radio_8" value="Ocasionalmente" class="comunicacion3">
+                                    <label for="com_radio_8_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="com_radio_8_Raramente" name="com_radio_8" value="Raramente" class="comunicacion3">
+                                    <label for="com_radio_8_Raramente">Raramente</label>
+                                    <input type="radio" id="com_radio_8_Nunca" name="com_radio_8" value="Nunca" class="comunicacion3">
+                                    <label for="com_radio_8_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->						
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 9</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Interpreto y produzco
+                                        íconos, símbolos y otras
+                                        formas de representación
+                                        de la información, para ser
+                                        utilizados con propósitos
+                                        educativos.
+                                    </p>
+                                    <input type="radio" id="com_radio_9_MuyFrecuentemente" name="com_radio_9" value="MuyFrecuentemente" class="comunicacion3" required>
+                                    <label for="com_radio_9_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="com_radio_9_Frecuente" name="com_radio_9" value="Frecuente" class="comunicacion3">
+                                    <label for="com_radio_9_Frecuente">Frecuente</label>
+                                    <input type="radio" id="com_radio_9_Ocasionalmente" name="com_radio_9" value="Ocasionalmente" class="comunicacion3">
+                                    <label for="com_radio_9_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="com_radio_9_Raramente" name="com_radio_9" value="Raramente" class="comunicacion3">
+                                    <label for="com_radio_9_Raramente">Raramente</label>
+                                    <input type="radio" id="com_radio_9_Nunca" name="com_radio_9" value="Nunca" class="comunicacion3">
+                                    <label for="com_radio_9_Nunca">Nunca</label>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <!-- Fin Pregunta -->
+                        
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container p-6">
+                            <hr>
+                            <h2>Preguntas para medir competencias en Gestión</h2>
+                            <!-- Estructura pregunta -->
+                            <div class="row">
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 1</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Identifico los elementos de la
+                                        gestión escolar que pueden
+                                        ser mejorados con el uso de
+                                        las TIC, en las diferentes
+                                        actividades institucionales.
+                                    </p>
+                                    <input type="radio" id="ges_radio_1_MuyFrecuentemente" name="ges_radio_1" value="MuyFrecuentemente" class="gestion1" required>
+                                    <label for="ges_radio_1_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ges_radio_1_Frecuente" name="ges_radio_1" value="Frecuente" class="gestion1">
+                                    <label for="ges_radio_1_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ges_radio_1_Ocasionalmente" name="ges_radio_1" value="Ocasionalmente" class="gestion1">
+                                    <label for="ges_radio_1_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ges_radio_1_Raramente" name="ges_radio_1" value="Raramente" class="gestion1">
+                                    <label for="ges_radio_1_Raramente">Raramente</label>
+                                    <input type="radio" id="ges_radio_1_Nunca" name="ges_radio_1" value="Nunca" class="gestion1">
+                                    <label for="ges_radio_1_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 2</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Conozco políticas escolares
+                                        para el uso de las TIC que
+                                        contemplan la privacidad, el
+                                        impacto ambiental y la salud
+                                        de los usuarios. 
+                                    </p>
+                                    <input type="radio" id="ges_radio_2_MuyFrecuentemente" name="ges_radio_2" value="MuyFrecuentemente" class="gestion1" required>
+                                    <label for="ges_radio_2_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ges_radio_2_Frecuente" name="ges_radio_2" value="Frecuente" class="gestion1">
+                                    <label for="ges_radio_2_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ges_radio_2_Ocasionalmente" name="ges_radio_2" value="Ocasionalmente" class="gestion1">
+                                    <label for="ges_radio_2_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ges_radio_2_Raramente" name="ges_radio_2" value="Raramente" class="gestion1">
+                                    <label for="ges_radio_2_Raramente">Raramente</label>
+                                    <input type="radio" id="ges_radio_2_Nunca" name="ges_radio_2" value="Nunca" class="gestion1">
+                                    <label for="ges_radio_2_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 3</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Identifico mis necesidades de
+                                        desarrollo profesional para la
+                                        innovación educativa con TIC.	
+                                    </p>
+                                    <input type="radio" id="ges_radio_3_MuyFrecuentemente" name="ges_radio_3" value="MuyFrecuentemente" class="gestion1" required>
+                                    <label for="ges_radio_3_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ges_radio_3_Frecuente" name="ges_radio_3" value="Frecuente" class="gestion1">
+                                    <label for="ges_radio_3_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ges_radio_3_Ocasionalmente" name="ges_radio_3" value="Ocasionalmente" class="gestion1">
+                                    <label for="ges_radio_3_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ges_radio_3_Raramente" name="ges_radio_3" value="Raramente" class="gestion1">
+                                    <label for="ges_radio_3_Raramente">Raramente</label>
+                                    <input type="radio" id="ges_radio_3_Nunca" name="ges_radio_3" value="Nunca" class="gestion1">
+                                    <label for="ges_radio_3_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 4</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Propongo y desarrollo procesos de
+                                        mejoramiento y seguimiento del
+                                        uso de TIC en la gestión escolar
+                                    </p>
+                                    <input type="radio" id="ges_radio_4_MuyFrecuentemente" name="ges_radio_4" value="MuyFrecuentemente" class="gestion2" required>
+                                    <label for="ges_radio_4_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ges_radio_4_Frecuente" name="ges_radio_4" value="Frecuente" class="gestion2">
+                                    <label for="ges_radio_4_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ges_radio_4_Ocasionalmente" name="ges_radio_4" value="Ocasionalmente" class="gestion2">
+                                    <label for="ges_radio_4_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ges_radio_4_Raramente" name="ges_radio_4" value="Raramente" class="gestion2">
+                                    <label for="ges_radio_4_Raramente">Raramente</label>
+                                    <input type="radio" id="ges_radio_4_Nunca" name="ges_radio_4" value="Nunca" class="gestion2">
+                                    <label for="ges_radio_4_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 5</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Adopto políticas escolares
+                                        existentes para el uso de
+                                        las TIC en mi institución que
+                                        contemplan la privacidad, el
+                                        impacto ambiental y la salud
+                                        de los usuarios.
+                                    </p>
+                                    <input type="radio" id="ges_radio_5_MuyFrecuentemente" name="ges_radio_5" value="MuyFrecuentemente" class="gestion2" required>
+                                    <label for="ges_radio_5_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ges_radio_5_Frecuente" name="ges_radio_5" value="Frecuente" class="gestion2">
+                                    <label for="ges_radio_5_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ges_radio_5_Ocasionalmente" name="ges_radio_5" value="Ocasionalmente" class="gestion2">
+                                    <label for="ges_radio_5_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ges_radio_5_Raramente" name="ges_radio_5" value="Raramente" class="gestion2">
+                                    <label for="ges_radio_5_Raramente">Raramente</label>
+                                    <input type="radio" id="ges_radio_5_Nunca" name="ges_radio_5" value="Nunca" class="gestion2">
+                                    <label for="ges_radio_5_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 6</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Selecciono y accedo a programas
+                                        de formación, apropiados para
+                                        mis necesidades de desarrollo
+                                        profesional, para la innovación
+                                        educativa con TIC.
+                                    </p>
+                                    <input type="radio" id="ges_radio_6_MuyFrecuentemente" name="ges_radio_6" value="MuyFrecuentemente" class="gestion2" required>
+                                    <label for="ges_radio_6_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ges_radio_6_Frecuente" name="ges_radio_6" value="Frecuente" class="gestion2">
+                                    <label for="ges_radio_6_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ges_radio_6_Ocasionalmente" name="ges_radio_6" value="Ocasionalmente" class="gestion2">
+                                    <label for="ges_radio_6_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ges_radio_6_Raramente" name="ges_radio_6" value="Raramente" class="gestion2">
+                                    <label for="ges_radio_6_Raramente">Raramente</label>
+                                    <input type="radio" id="ges_radio_6_Nunca" name="ges_radio_6" value="Nunca" class="gestion2">
+                                    <label for="ges_radio_6_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 7</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Evalúo los beneficios y
+                                        utilidades de herramientas
+                                        TIC en la gestión escolar
+                                        y en la proyección del
+                                        PEI dando respuesta a
+                                        las necesidades de mi
+                                        institución.
+                                    </p>
+                                    <input type="radio" id="ges_radio_7_MuyFrecuentemente" name="ges_radio_7" value="MuyFrecuentemente" class="gestion3" required>
+                                    <label for="ges_radio_7_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ges_radio_7_Frecuente" name="ges_radio_7" value="Frecuente" class="gestion3">
+                                    <label for="ges_radio_7_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ges_radio_7_Ocasionalmente" name="ges_radio_7" value="Ocasionalmente" class="gestion3">
+                                    <label for="ges_radio_7_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ges_radio_7_Raramente" name="ges_radio_7" value="Raramente" class="gestion3">
+                                    <label for="ges_radio_7_Raramente">Raramente</label>
+                                    <input type="radio" id="ges_radio_7_Nunca" name="ges_radio_7" value="Nunca" class="gestion3">
+                                    <label for="ges_radio_7_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->					
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 8</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Desarrollo políticas
+                                        escolares para el uso de las
+                                        TIC en mi institución que
+                                        contemplan la privacidad, el
+                                        impacto ambiental y la salud
+                                        de los usuarios. 
+                                    </p>
+                                    <input type="radio" id="ges_radio_8_MuyFrecuentemente" name="ges_radio_8" value="MuyFrecuentemente" class="gestion3" required>
+                                    <label for="ges_radio_8_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ges_radio_8_Frecuente" name="ges_radio_8" value="Frecuente" class="gestion3">
+                                    <label for="ges_radio_8_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ges_radio_8_Ocasionalmente" name="ges_radio_8" value="Ocasionalmente" class="gestion3">
+                                    <label for="ges_radio_8_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ges_radio_8_Raramente" name="ges_radio_8" value="Raramente" class="gestion3">
+                                    <label for="ges_radio_8_Raramente">Raramente</label>
+                                    <input type="radio" id="ges_radio_8_Nunca" name="ges_radio_8" value="Nunca" class="gestion3">
+                                    <label for="ges_radio_8_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->						
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 9</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Dinamizo la formación
+                                        de mis colegas y los
+                                        apoyo para que
+                                        integren las TIC de
+                                        forma innovadora
+                                        en sus prácticas
+                                        pedagógicas.
+                                    </p>
+                                    <input type="radio" id="ges_radio_9_MuyFrecuentemente" name="ges_radio_9" value="MuyFrecuentemente" class="gestion3" required>
+                                    <label for="ges_radio_9_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="ges_radio_9_Frecuente" name="ges_radio_9" value="Frecuente" class="gestion3">
+                                    <label for="ges_radio_9_Frecuente">Frecuente</label>
+                                    <input type="radio" id="ges_radio_9_Ocasionalmente" name="ges_radio_9" value="Ocasionalmente" class="gestion3">
+                                    <label for="ges_radio_9_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="ges_radio_9_Raramente" name="ges_radio_9" value="Raramente" class="gestion3">
+                                    <label for="ges_radio_9_Raramente">Raramente</label>
+                                    <input type="radio" id="ges_radio_9_Nunca" name="ges_radio_9" value="Nunca" class="gestion3">
+                                    <label for="ges_radio_9_Nunca">Nunca</label>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        
+                        <!-- Fin Pregunta -->
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container p-6">
+                            <hr>
+                            <h2>Preguntas para medir competencias de Investigación</h2>
+                            <div class="row">
+                                <!-- Estructura pregunta -->						
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 1</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Documento observaciones de
+                                        mi entorno y mi práctica con el
+                                        apoyo de TIC.
+                                    </p>
+                                    <input type="radio" id="inv_radio_1_MuyFrecuentemente" name="inv_radio_1" value="MuyFrecuentemente" class="investigacion1" required>
+                                    <label for="inv_radio_1_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="inv_radio_1_Frecuente" name="inv_radio_1" value="Frecuente" class="investigacion1">
+                                    <label for="inv_radio_1_Frecuente">Frecuente</label>
+                                    <input type="radio" id="inv_radio_1_Ocasionalmente" name="inv_radio_1" value="Ocasionalmente" class="investigacion1">
+                                    <label for="inv_radio_1_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="inv_radio_1_Raramente" name="inv_radio_1" value="Raramente" class="investigacion1">
+                                    <label for="inv_radio_1_Raramente">Raramente</label>
+                                    <input type="radio" id="inv_radio_1_Nunca" name="inv_radio_1" value="Nunca" class="investigacion1">
+                                    <label for="inv_radio_1_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 2</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Identifico redes, bases
+                                        de datos y fuentes
+                                        de información que
+                                        facilitan mis procesos de
+                                        investigación.
+                                    </p>
+                                    <input type="radio" id="inv_radio_2_MuyFrecuentemente" name="inv_radio_2" value="MuyFrecuentemente" class="investigacion1" required>
+                                    <label for="inv_radio_2_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="inv_radio_2_Frecuente" name="inv_radio_2" value="Frecuente" class="investigacion1">
+                                    <label for="inv_radio_2_Frecuente">Frecuente</label>
+                                    <input type="radio" id="inv_radio_2_Ocasionalmente" name="inv_radio_2" value="Ocasionalmente" class="investigacion1">
+                                    <label for="inv_radio_2_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="inv_radio_2_Raramente" name="inv_radio_2" value="Raramente" class="investigacion1">
+                                    <label for="inv_radio_2_Raramente">Raramente</label>
+                                    <input type="radio" id="inv_radio_2_Nunca" name="inv_radio_2" value="Nunca" class="investigacion1">
+                                    <label for="inv_radio_2_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 3</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Sé buscar, ordenar, filtrar,
+                                        conectar y analizar
+                                        información disponible en
+                                        Internet.
+                                    </p>
+                                    <input type="radio" id="inv_radio_3_MuyFrecuentemente" name="inv_radio_3" value="MuyFrecuentemente" class="investigacion1" required>
+                                    <label for="inv_radio_3_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="inv_radio_3_Frecuente" name="inv_radio_3" value="Frecuente" class="investigacion1">
+                                    <label for="inv_radio_3_Frecuente">Frecuente</label>
+                                    <input type="radio" id="inv_radio_3_Ocasionalmente" name="inv_radio_3" value="Ocasionalmente" class="investigacion1">
+                                    <label for="inv_radio_3_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="inv_radio_3_Raramente" name="inv_radio_3" value="Raramente" class="investigacion1">
+                                    <label for="inv_radio_3_Raramente">Raramente</label>
+                                    <input type="radio" id="inv_radio_3_Nunca" name="inv_radio_3" value="Nunca" class="investigacion1">
+                                    <label for="inv_radio_3_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 4</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Represento e interpreto
+                                        datos e información de mis
+                                        investigaciones en diversos
+                                        formatos digitales.
+                                    </p>
+                                    <input type="radio" id="inv_radio_4_MuyFrecuentemente" name="inv_radio_4" value="MuyFrecuentemente" class="investigacion2" required>
+                                    <label for="inv_radio_4_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="inv_radio_4_Frecuente" name="inv_radio_4" value="Frecuente" class="investigacion2">
+                                    <label for="inv_radio_4_Frecuente">Frecuente</label>
+                                    <input type="radio" id="inv_radio_4_Ocasionalmente" name="inv_radio_4" value="Ocasionalmente" class="investigacion2">
+                                    <label for="inv_radio_4_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="inv_radio_4_Raramente" name="inv_radio_4" value="Raramente" class="investigacion2">
+                                    <label for="inv_radio_4_Raramente">Raramente</label>
+                                    <input type="radio" id="inv_radio_4_Nunca" name="inv_radio_4" value="Nunca" class="investigacion2">
+                                    <label for="inv_radio_4_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 5</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Utilizo redes profesionales y
+                                        plataformas especializadas
+                                        en el desarrollo de mis
+                                        investigaciones.
+                                    </p>
+                                    <input type="radio" id="inv_radio_5_MuyFrecuentemente" name="inv_radio_5" value="MuyFrecuentemente" class="investigacion2" required>
+                                    <label for="inv_radio_5_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="inv_radio_5_Frecuente" name="inv_radio_5" value="Frecuente" class="investigacion2">
+                                    <label for="inv_radio_5_Frecuente">Frecuente</label>
+                                    <input type="radio" id="inv_radio_5_Ocasionalmente" name="inv_radio_5" value="Ocasionalmente" class="investigacion2">
+                                    <label for="inv_radio_5_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="inv_radio_5_Raramente" name="inv_radio_5" value="Raramente" class="investigacion2">
+                                    <label for="inv_radio_5_Raramente">Raramente</label>
+                                    <input type="radio" id="inv_radio_5_Nunca" name="inv_radio_5" value="Nunca" class="investigacion2">
+                                    <label for="inv_radio_5_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 6</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Contrasto y analizo
+                                        con mis estudiantes
+                                        información
+                                        proveniente de
+                                        múltiples fuentes
+                                        digitales.
+                                    </p>
+                                    <input type="radio" id="inv_radio_6_MuyFrecuentemente" name="inv_radio_6" value="MuyFrecuentemente" class="investigacion2" required>
+                                    <label for="inv_radio_6_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="inv_radio_6_Frecuente" name="inv_radio_6" value="Frecuente" class="investigacion2">
+                                    <label for="inv_radio_6_Frecuente">Frecuente</label>
+                                    <input type="radio" id="inv_radio_6_Ocasionalmente" name="inv_radio_6" value="Ocasionalmente" class="investigacion2">
+                                    <label for="inv_radio_6_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="inv_radio_6_Raramente" name="inv_radio_6" value="Raramente" class="investigacion2">
+                                    <label for="inv_radio_6_Raramente">Raramente</label>
+                                    <input type="radio" id="inv_radio_6_Nunca" name="inv_radio_6" value="Nunca" class="investigacion2">
+                                    <label for="inv_radio_6_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 7</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Divulgo los resultados de mis
+                                        investigaciones utilizando
+                                        las herramientas que me
+                                        ofrecen las TIC.
+                                    </p>
+                                    <input type="radio" id="inv_radio_7_MuyFrecuentemente" name="inv_radio_7" value="MuyFrecuentemente" class="investigacion3" required>
+                                    <label for="inv_radio_7_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="inv_radio_7_Frecuente" name="inv_radio_7" value="Frecuente" class="investigacion3">
+                                    <label for="inv_radio_7_Frecuente">Frecuente</label>
+                                    <input type="radio" id="inv_radio_7_Ocasionalmente" name="inv_radio_7" value="Ocasionalmente" class="investigacion3">
+                                    <label for="inv_radio_7_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="inv_radio_7_Raramente" name="inv_radio_7" value="Raramente" class="investigacion3">
+                                    <label for="inv_radio_7_Raramente">Raramente</label>
+                                    <input type="radio" id="inv_radio_7_Nunca" name="inv_radio_7" value="Nunca" class="investigacion3">
+                                    <label for="inv_radio_7_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->					
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 8</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Participo activamente en
+                                        redes y comunidades de
+                                        práctica, para la construcción
+                                        colectiva de conocimientos
+                                        con estudiantes y colegas,
+                                        con el apoyo de TIC.
+                                    </p>
+                                    <input type="radio" id="inv_radio_8_MuyFrecuentemente" name="inv_radio_8" value="MuyFrecuentemente" class="investigacion3" required>
+                                    <label for="inv_radio_8_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="inv_radio_8_Frecuente" name="inv_radio_8" value="Frecuente" class="investigacion3">
+                                    <label for="inv_radio_8_Frecuente">Frecuente</label>
+                                    <input type="radio" id="inv_radio_8_Ocasionalmente" name="inv_radio_8" value="Ocasionalmente" class="investigacion3">
+                                    <label for="inv_radio_8_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="inv_radio_8_Raramente" name="inv_radio_8" value="Raramente" class="investigacion3">
+                                    <label for="inv_radio_8_Raramente">Raramente</label>
+                                    <input type="radio" id="inv_radio_8_Nunca" name="inv_radio_8" value="Nunca" class="investigacion3">
+                                    <label for="inv_radio_8_Nunca">Nunca</label>
+                                </div>
+                                <!-- Fin Pregunta -->						
+                                <!-- Estructura pregunta -->
+                                <div class="col-3 col-12-medium">				
+                                    <h4>Pregunta 9</h4>
+                                </div>
+                                <div class="col-9 col-12-medium">
+                                    <p>
+                                        Utiliza la información
+                                        disponible en Internet
+                                        con una actitud
+                                        crítica y reflexiva.
+                                    </p>
+                                    <input type="radio" id="inv_radio_9_MuyFrecuentemente" name="inv_radio_9" value="MuyFrecuentemente" class="investigacion3" required>
+                                    <label for="inv_radio_9_MuyFrecuentemente">Muy frecuentemente</label>
+                                    <input type="radio" id="inv_radio_9_Frecuente" name="inv_radio_9" value="Frecuente" class="investigacion3">
+                                    <label for="inv_radio_9_Frecuente">Frecuente</label>
+                                    <input type="radio" id="inv_radio_9_Ocasionalmente" name="inv_radio_9" value="Ocasionalmente" class="investigacion3">
+                                    <label for="inv_radio_9_Ocasionalmente">Ocasionalmente</label>
+                                    <input type="radio" id="inv_radio_9_Raramente" name="inv_radio_9" value="Raramente" class="investigacion3">
+                                    <label for="inv_radio_9_Raramente">Raramente</label>
+                                    <input type="radio" id="inv_radio_9_Nunca" name="inv_radio_9" value="Nunca" class="investigacion3">
+                                    <label for="inv_radio_9_Nunca">Nunca</label>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+            
+
+            <div class="container p-6">
+                <div class="col-12">
+                    
+                    <input type="button" type="button" value="Enviar Respuestas" class="primary" data-toggle="modal" data-target="#exampleModal">
+                    <input type="reset" value="Reiniciar">
+                    
+                </div>
+            </div>
+            
+
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">            
+                <img src="/images/icons/prev-icon.png">
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <img src="/images/icons/next-icon.png">
+            </a>
+        </form>
+            
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">Advertencia</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-3">
+                            <img src="/images/icons/warning-icon.png" width="100px">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="alert alert-info" role="alert">
+                                Asegurese de haber diligenciado todo el formulario
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                ¿Está seguro que desea enviar la información puesta en el formulario?
+                            </div>
+                            
+                        </div>
+                    </div>                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="primary" form="formCompetencias">Enviar Datos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> footer}}
+</body>
+

@@ -1,0 +1,193 @@
+<body>
+    {{> navUsuario}}
+    <div class="container p-5">        
+        <section id="perfil-editar">
+            <form action="/perfil/editar/{{info.k_cedula}}" method="POST" enctype="multipart/form-data">
+                <div class="row">                               
+                    <div class="col-md-4 align-self-center">                    
+                        <label for="imagen">Imagen de Perfil</label>                        
+                            {{#if info.n_imagen}}
+                                <img src="/images/imagenesSubidas/{{info.n_imagen}}" alt="" height="200px" name="imagen" class="rounded-circle">
+                            {{else}}
+                                <img src="/images/user-icon.png" alt="" height="200px" name="imagen" class="rounded-circle">
+                            {{/if}}                        
+                        <hr>
+                        <input type="file" id="inputFileImg" name="inputFileImg" hidden="hidden">
+                        <input id="btnInputFile" class="btn btn-light" value="Cambiar Foto de Perfil">
+                        <span id="spanInputFile">No se ha elegido un archivo</span>
+                    </div>
+                    <div class="col-md-8">           
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" placeholder="Nombre" class="form-control" value="{{info.n_nombre}}" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="apellido">Apellido</label>
+                                <input type="text" name="apellido" placeholder="Apellido" class="form-control" value="{{info.n_apellido}}" required>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="cedula">Documento de Identidad</label>
+                                <input type="text" name="cedula" placeholder="Número de Identidad" class="form-control" value="{{info.k_cedula}}" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="selecGenero">Género</label>
+                                <input id="auxGenero" class="escondido" value="{{info.o_genero}}">
+                                <select name="selecGenero" id="selecGenero">
+                                    <option>Masculino</option>
+                                    <option>Femenino</option>                                                        
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="col-md-12">
+                            <label for="correo">Dirección de correo Electrónico</label>
+                            <input type="text" name="correo" placeholder="Correo Electrónico" class="form-control" value="{{info.n_email}}" required>
+                        </div>
+                        <input id="año" class="escondido" name="año" value="{{info.n_año}}">
+                    </div>                
+                </div>
+                <hr>
+                <ul>
+                    <li>
+                        <label for="institucion">Institución: </label>
+                        <div class="row align-items-center">
+                            <div class="col-md-6">                        
+                                <select name="selecInstitucion" id="selecInstitucion">
+                                    {{#each instituciones}}
+                                        <option value="{{k_id}}" >{{n_nombre}}</option>
+                                    {{/each}}                            
+                                </select>
+                                
+                                
+                            </div>
+                            <div class="col-md-6">
+                                <label>¿Otra?</label>
+                                <input type="radio" name="inst" id="inst-otra-si" value="Si">
+                                <label for="inst-otra-si">Si</label>
+                                <input type="radio" name="inst" id="inst-otra-no" value="No" checked>
+                                <label for="inst-otra-no">No</label>
+
+                                <div class="otro"  id="txtInstitucion">
+                                    <label for="otroInstitucion">Nombre Institucion</label>
+                                    <input type="text" name="otroInstitucion" placeholder="¿Cuál?">    
+                                    <label for="otroInsFacultad">Nombre de la Facultad</label>
+                                    <input type="text" name="otroInsFacultad" placeholder="¿Cuál?">                                            
+                                </div>                                            
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <div>
+                        <hr>
+                        <li>
+                            <label for="facultad">Facultad: </label>
+                            <div class="row align-items-center">
+                                <div class="col-md-6">                            
+                                    <select name="selecFacultad" id="selecFacultad">
+                                        {{#each facultades}}
+                                            <option value="{{k_id}}" class="{{fk_id_institucion}}">{{n_nombre}}</option>
+                                        {{/each}}
+                                    </select>                                          
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <label>¿Otra?</label>
+                                    <input type="radio" name="facultad" id="facultad-otra-si" value="Si">
+                                    <label for="facultad-otra-si">Si</label>
+                                    <input type="radio" name="facultad" id="facultad-otra-no" value="No" checked>
+                                    <label for="facultad-otra-no">No</label>
+
+                                    <div class="otro"  id="txtFacultad">
+                                        <label for="otroFacultad">Nombre de la Facultad</label>
+                                        <input type="text" name="otroFacultad" placeholder="¿Cuál?">                                                
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                        
+                    
+                    <hr>
+                    <li>
+                        <label for="asignatura">Área de Especialización: </label>
+                        <div class="row align-items-center">                    
+                            <div class="col-md-6">                        
+                                <select name="selecArea" id="selecArea">
+                                    {{#each areas}}
+                                        <option  value="{{k_id}}">{{n_nombre}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label>¿Otra?</label>
+                                <input type="radio" name="area" id="area-otra-si" value="Si">
+                                <label for="area-otra-si">Si</label>
+                                <input type="radio" name="area" id="area-otra-no" value="No" checked>
+                                <label for="area-otra-no">No</label>
+                                <div class="otro"  id="txtArea">
+                                    <label for="otroArea">Nombre del Área</label>
+                                    <input type="text" name="otroArea" placeholder="¿Cuál?">
+                                    <label>Tipo de Área de Especialización</label>
+                                    <input type="radio" name="teopra" id="teopra-teo" value="Teórica" checked>
+                                    <label for="teopra-teo">Teórica</label>
+                                    <input type="radio" name="teopra" id="teopra-pra" value="Práctica">
+                                    <label for="teopra-pra">Práctica</label>
+                                    <input type="radio" name="teopra" id="teopra-teopra" value="Teórico-Práctica">
+                                    <label for="teopra-teopra">Teórico-Práctica</label>
+                                </div>
+                            </div>
+                        </div>                
+                    </li>
+                    <hr>
+                    <li>
+                        <label for="ciclo">Ciclo Propedéutico: </label>
+                        <div class="row align-items-center">                    
+                            <div class="col-md-6">                        
+                                <select name="selecCiclo" id="selecCiclo">
+                                    {{#each ciclos}}
+                                        <option value="{{k_id}}">{{n_nombre}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label>¿Otra?</label>
+                                <input type="radio" name="cicl" id="cicl-otra-si" value="Si">
+                                <label for="cicl-otra-si">Si</label>
+                                <input type="radio" name="cicl" id="cicl-otra-no" value="No" checked>
+                                <label for="cicl-otra-no">No</label>
+                                <div class="otro"  id="txtCiclo">
+                                    <label for="otroCiclo">Nombre del Ciclo Propedéutico</label>
+                                    <input type="text" name="otroCiclo" placeholder="¿Cuál?">                                                
+                                </div>
+                            </div>
+                        </div>                
+                    </li>
+                    <li>
+                        <label for="ciclo">¿Ha recibido Formación por parte de la ETIC?</label>
+                        <div class="row align-items-center">
+                            <div class="col">
+                                
+                                <input type="radio" name="formacionEtic" id="formacionEtic-si" value="Si">
+                                <label for="formacionEtic-si">Si</label>
+                                <input type="radio" name="formacionEtic" id="formacionEtic-no" value="No">
+                                <label for="formacionEtic-no">No</label>
+                            </div>                                        
+                        </div>                
+                    </li>  
+                </ul>
+                <div class="form-group">                            
+                    <button class="primary">Actualizar Datos</button>
+                </div>
+            </form>
+            
+        </section>
+        
+    </div>
+    {{> footer}}
+</body>

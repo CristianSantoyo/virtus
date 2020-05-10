@@ -1,0 +1,93 @@
+<body>
+    {{> navAdmin}}
+    <div class="container p-5">
+        <section id="perfil-normal">
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="imagen">Imagen de Perfil</label>
+
+                    {{#if result.n_imagen}}
+                        <img src="/images/imagenesSubidas/{{result.n_imagen}}" alt="" height="200px" name="imagen" class="rounded-circle">
+                    {{else}}
+                        <img src="/images/icons/user-icon.png" alt="" height="200px" name="imagen" class="rounded-circle">
+                    {{/if}}
+                    
+                </div>
+                <div class="col-md-8">                    
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="nombre">Nombre:</label>
+                                <p name="nombre">{{result.n_nombre}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="apellido">Apellido:</label>
+                                <p name="nombre">{{result.n_apellido}}</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="cedula">Documento de Identidad:</label>
+                                <p name="cedula">{{result.k_cedula}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="genero">Género:</label>
+                                <p name="genero">{{result.o_genero}}</p>
+                            </div>                            
+                        </div>
+                        <div class="row">
+                            <label for="correo">Dirección de correo Electrónico:</label>
+                            <p name="correo">{{result.n_email}}</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="correo">Ha recibido formación por parte de la ETIC:</label>
+                                <p name="correo">{{result.n_ha_recibido_formacion}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="año">Año de registro:</label>
+                                <p name="año">{{result.n_año}}</p>
+                            </div>
+                        </div>
+                </div>
+                
+            </div>
+            
+
+            <div class="col-md-12">
+                <ul>
+                    <li>
+                        <label for="institucion">Institución: </label>
+                            <p name="institucion">{{institucion.n_nombre}}</p>
+                    </li>
+                    <li>
+                        <label for="institucion">Facultad: </label>
+                            <p name="institucion">{{facultad.n_nombre}}</p>
+                    </li>
+                    <li>
+                        <label for="asignatura">Área de Especialización: </label>
+                            <p name="asignatura">{{area.n_nombre}} - {{area.n_tipo}}</p>
+                    </li>
+                    <li>
+                        <label for="ciclo">Ciclo Propedéutico: </label>                            
+                        <p name="ciclo">{{ciclo.n_nombre}}</p>
+                    </li>                    
+                </ul>            
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <a href="/editarPerfilAdmin/{{result.k_cedula}}">
+                            <input type="button" value="Editar Información" class="primary m-1" style="width: 100%;">
+                        </a>
+                        <a href="/homeAdmin">
+                            <input  type="button" value="Volver" class="m-1" style="width: 100%;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>        
+    </div>
+    {{> footer}}
+</body>
